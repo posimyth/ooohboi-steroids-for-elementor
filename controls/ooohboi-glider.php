@@ -40,6 +40,19 @@ class OoohBoi_Glider {
         /* add script */
         add_action( 'elementor/preview/enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
 
+		// have to change this - code added in the v2.1.7
+		add_action( 'wp_footer', function() {
+            ?>
+            <script>
+                (function() {
+                    var link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = '<?php echo OoohBoi_URL . 'assets/css/swiper.min.css' ?>';
+                    document.head.appendChild(link);
+                })();
+            </script>
+            <?php
+        }, 100 );
     }
 
     /* enqueue script JS */
