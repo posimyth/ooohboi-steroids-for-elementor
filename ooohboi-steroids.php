@@ -2,7 +2,7 @@
 /**
  * Plugin Name: OoohBoi Steroids for Elementor
  * Description: An awesome set of tools/options/settings that extend Elementor default/existing widgets and elements. It keeps the editor tidy, saves valuable resources and improves the workflow.
- * Version:     2.1.8
+ * Version:     2.1.9
  * Author:      OoohBoi
  * Author URI:  https://www.youtube.com/c/OoohBoi
  * Text Domain: ooohboi-steroids
@@ -17,7 +17,7 @@ use Elementor\Core\Settings\Manager as SettingsManager;
 
 defined( 'ABSPATH' ) || die(); // Exit if accessed directly.
 
-define( 'OoohBoi_VERSION', '2.1.8' );
+define( 'OoohBoi_VERSION', '2.1.9' );
 define( 'OoohBoi_FILE', __FILE__ );
 define( 'OoohBoi_URL', plugins_url( '/', __FILE__ ) );
 
@@ -37,7 +37,7 @@ final class OoohBoi_Steroids {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '2.1.8';
+	const VERSION = OoohBoi_VERSION;
 
 	/**
 	 * Minimum Elementor Version
@@ -345,25 +345,19 @@ final class OoohBoi_Steroids {
 
 	}
 
-	/*
-		* On plugin deactivation
-		*
-		* @since 2.1.3
-		*
-		* @access public
+	/**
+	* On plugin deactivation
+	*
+	* @since 2.1.3
 	*/
     public function obs_on_deactivate() {
-
         delete_option( 'steroids_for_elementor' );
-
     }
 
-	/*
-		* Init Extensions
-		*
-		* @since 1.9.0
-		*
-		* @access public
+	/**
+	* Init Extensions
+	*
+	* @since 1.9.0
 	*/
     public function admin_notice_missing_main_plugin() {
 
