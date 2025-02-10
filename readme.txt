@@ -49,7 +49,7 @@ No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 == Changelog == 
 
 = 2.1.10 =
-- Added : BETTER TEMPLATES LIBRARY [Explanation Video](https://www.youtube.com/watch?v=9t4vugF2Lok)
+- Added : BETTER TEMPLATES LIBRARY [Explanation Video](https://www.youtube.com/watch?v=A4lFYsk5TLs)
 - Added : GLIDER [Explanation Video](https://www.youtube.com/watch?v=9t4vugF2Lok)
 - Fix: Minor Bug Fixes & Performance Improvements
 
