@@ -66,7 +66,11 @@ $fields[] = array(
             'id'            => 'ob_use_btl', 
             'title'			=> 'BETTER TEMPLATES LIBRARY', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAdd preview to your templates, Export/Import/Share your templates with preview image.%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ),
+            'description' => sprintf(
+                __( '%sAdd preview to your templates, Export/Import/Share your templates with preview image.%s <a href="https://www.youtube.com/watch?v=A4lFYsk5TLs" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">Video Here</a>', 'ooohboi-steroids' ),
+                '<span class="ob-option-desc">',
+                '</span>'
+            ),
             'default'       => 'no',
         ),
         array(
@@ -76,6 +80,17 @@ $fields[] = array(
             'description'	=> sprintf( __( '%sAllows you to change the writing mode of the Heading and Text Editor widgets%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ),
             'default'       => 'yes',
         ),
+        // array(
+        //     'id'            => 'ob_use_harakiri', 
+        //     'title'			=> 'HARAKIRI', 
+        //     'type'			=> 'switcher',
+        //     'description' => sprintf(
+        //         __( '%sAllows you to change the writing mode of the Heading and Text Editor widgets.%s <a href="https://drive.google.com/file/d/1fAG4VkNkWdlSH_kWBdv-OIlyD_r6uWGY/view" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">Video Here</a>', 'ooohboi-steroids' ),
+        //         '<span class="ob-option-desc">',
+        //         '</span>'
+        //     ),
+        //     'default'       => 'yes',
+        // ),
         array(
             'id'            => 'ob_use_poopart', 
             'title'			=> 'POOPART', 
@@ -109,6 +124,18 @@ $fields[] = array(
             'title'			=> 'GLIDER', 
             'type'			=> 'switcher',
             'description'	=> sprintf( __( '%sThe content slider made out of Section and Columns (Swiper)%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'default'       => 'yes',
+        ),
+        array(
+            'id'            => 'ob_use_glider', 
+            'title'         => 'GLIDER', 
+            'type'          => 'switcher',
+            'description' => sprintf(
+                __( '%sThe content slider made out of Section and Columns (Swiper).%s <a href="https://www.youtube.com/watch?v=9t4vugF2Lok" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">%s</a>', 'ooohboi-steroids' ),
+                '<span class="ob-option-desc">',
+                '</span>',
+                esc_html__( 'Video Here', 'ooohboi-steroids' )
+            ),
             'default'       => 'yes',
         ),
         array(
