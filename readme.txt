@@ -50,7 +50,7 @@ No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 
 = 2.1.12 =
 - Added : OVERLAIZ [Explanation Video](https://www.youtube.com/watch?v=iMm9MI120e8)
-- Added : VIDEOMASQ [Explanation Video]()
+- Added : VIDEOMASQ [Explanation Video](https://www.youtube.com/watch?v=6es-E_xjXSE)
 - Update : Renamed COMMENTZ Gravatar Switcher.  
 - Fix : Glider was breaking in the Elementor Editor backend.
 

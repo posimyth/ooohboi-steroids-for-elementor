@@ -174,7 +174,15 @@ $fields[] = array(
             'id'            => 'ob_use_videomasq', 
             'title'			=> 'VIDEOMASQ', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAdd the SVG mask to the Section video background and let the video play inside any shape%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ),
+            'description' => wp_kses_post(
+                sprintf(
+                    /* translators: %1$s opening span tag, %2$s closing span tag, %3$s YouTube link */
+                    __( '%1$sAdd the SVG mask to the Section video background and let the video play inside any shape%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a href="' . esc_url('https://www.youtube.com/watch?v=6es-E_xjXSE') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
