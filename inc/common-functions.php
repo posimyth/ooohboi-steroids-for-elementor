@@ -105,7 +105,15 @@ $fields[] = array(
             'id'            => 'ob_use_overlaiz', 
             'title'			=> 'OVERLAIZ', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAn awesome set of options for the Background Overlay element manipulation (up to Elementor 3.5.9)%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    /* translators: %1$s opening span tag, %2$s closing span tag, %3$s YouTube link */
+                    __( '%1$sAn awesome set of options for the Background Overlay element manipulation (up to Elementor 3.5.9)%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a href="' . esc_url('https://www.youtube.com/watch?v=iMm9MI120e8') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
