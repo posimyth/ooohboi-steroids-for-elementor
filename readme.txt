@@ -4,7 +4,7 @@ Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost 
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 2.1.11
+Stable tag: 2.1.12
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -49,13 +49,15 @@ No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 == Changelog == 
 
 = 2.1.12 =
+- Added : OVERLAIZ [Explanation Video](https://www.youtube.com/watch?v=iMm9MI120e8)
+- Added : VIDEOMASQ [Explanation Video]()
+- Update : Renamed COMMENTZ Gravatar Switcher.  
 - Fix : Glider was breaking in the Elementor Editor backend.
 
 = 2.1.11 =
 - Added : HARAKIRI [Explanation Video](https://www.youtube.com/watch?v=_jvsCCmFWJ0)
 - Added : POOPART [Explanation Video](https://www.youtube.com/watch?v=GIVQw331860)
 - Added : PAGININI [Explanation Video](https://www.youtube.com/watch?v=LjaU-TRZAIc)
-- Update : Renamed COMMENTZ Gravatar Switcher.  
 - Fix: Minor Bug Fixes & Performance Improvements
 
 = 2.1.10 =
