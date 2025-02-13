@@ -377,7 +377,7 @@ class OoohBoi_Commentz {
 		$element->add_control(
 			'_ob_commentz_show_gravatar',
 			[
-				'label' => __( 'Gravatar', 'ooohboi-steroids' ),
+				'label' => __( 'Gravatar Disable', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::SWITCHER,
 				'return_value' => 'none',
 				'default' => 'block',

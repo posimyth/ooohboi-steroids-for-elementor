@@ -21,10 +21,10 @@ By enabling this option you acknowledge its <a href="https://greensock.com/stand
 $cdnjs_motionpath = '<p class="ob-alert">NOTE! This (MotionPath) JavaScript library is hosted by, and loaded from the <a href="https://cdnjs.com/libraries/gsap">cdnjs.com</a>. "OoohBoi - Steroids for Elementor" plugin does not include that file! 
 By enabling this option you acknowledge its <a href="https://greensock.com/standard-license/" target="_blank">terms of use</a>, and accept every responsibility - including the risk of script unavailability, vulnerability and the data loss.</p>';
 // --------------------------- E X O P I T ----- >
+
 $config_submenu = array(
-    
     'type'              => 'menu', // Required, menu or metabox
-    'title'             => 'Steroids for Elementor', // options panel title
+    'title'             => 'Ooohboi Steroids for Elementor', // options panel title
     'menu_title'        => 'Steroids for Elementor', // admin menu title
     'icon'              => SFE_DIR_URL . 'img/sfe-icon-WP-admin.png',
     'id'                => 'steroids_for_elementor',  // Required, meta box id, unique per page, to save: get_option( id )
@@ -77,25 +77,28 @@ $fields[] = array(
             'id'            => 'ob_use_harakiri', 
             'title'			=> 'HARAKIRI', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAllows you to change the writing mode of the Heading and Text Editor widgets%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ),
+            'description' => wp_kses_post(
+                sprintf(
+                    esc_html__('%sAllows you to change the writing mode of the Heading and Text Editor widgets.%s %s', 'ooohboi-steroids'),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a href="https://www.youtube.com/watch?v=_jvsCCmFWJ0" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
-        // array(
-        //     'id'            => 'ob_use_harakiri', 
-        //     'title'			=> 'HARAKIRI', 
-        //     'type'			=> 'switcher',
-        //     'description' => sprintf(
-        //         __( '%sAllows you to change the writing mode of the Heading and Text Editor widgets.%s <a href="https://drive.google.com/file/d/1fAG4VkNkWdlSH_kWBdv-OIlyD_r6uWGY/view" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">Video Here</a>', 'ooohboi-steroids' ),
-        //         '<span class="ob-option-desc">',
-        //         '</span>'
-        //     ),
-        //     'default'       => 'yes',
-        // ),
         array(
             'id'            => 'ob_use_poopart', 
             'title'			=> 'POOPART', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAdd an overlay or underlay ghost-element to any Elementor Widget%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    esc_html__('%sAdd an overlay or underlay ghost-element to any Elementor Widget.%s %s', 'ooohboi-steroids'),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a href="https://www.youtube.com/watch?v=GIVQw331860" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
@@ -109,7 +112,14 @@ $fields[] = array(
             'id'            => 'ob_use_paginini', 
             'title'			=> 'PAGININI', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sIt allows you to style up the posts pagination in Elementor%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    esc_html__('%sIt allows you to style up the posts pagination in Elementor.%s %s', 'ooohboi-steroids'),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a href="https://www.youtube.com/watch?v=f6YO8jMAlMc" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
@@ -117,13 +127,6 @@ $fields[] = array(
             'title'			=> 'BREAKING BAD', 
             'type'			=> 'switcher',
             'description'	=> sprintf( __( '%sA must to have extension for the Section and Columns (up to Elementor 3.5.9)%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
-            'default'       => 'yes',
-        ),
-        array(
-            'id'            => 'ob_use_glider', 
-            'title'			=> 'GLIDER', 
-            'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sThe content slider made out of Section and Columns (Swiper)%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
             'default'       => 'yes',
         ),
         array(

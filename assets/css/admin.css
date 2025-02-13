@@ -1,5 +1,21 @@
 /* Steroids settings page */
 
+.notice,
+.notice-errors,
+.notice .notice-errors,
+.notice-warning,
+.is-dismissible {
+	display: none !important;
+}
+
+#e-admin-top-bar-root{
+	display: none !important;
+}
+
+#e-admin-top-bar-root.e-admin-top-bar--active~#wpbody #wpbody-content{
+	margin-block-start: 0px !important;
+}
+
 /* 2.0.6 */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap');
 :root {
@@ -29,6 +45,7 @@ a.toplevel_page_steroids_for_elementor.wp-not-current-submenu .wp-menu-image img
 
 .exopite-sof-wrapper.steroids_for_elementor-options .sfe-intro p {
 	font-size: 20px;
+	margin-top: 10px;
 }
 
 .exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-content-nav .exopite-sof-sections {
@@ -43,7 +60,8 @@ a.toplevel_page_steroids_for_elementor.wp-not-current-submenu .wp-menu-image img
 }
 
 .exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-section > .exopite-sof-field {
-	padding: 32px;
+	padding: 25px;
+	padding-top: 0px;
 }
 
 .exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-field .exopite-sof-title {
@@ -191,8 +209,8 @@ a.toplevel_page_steroids_for_elementor.wp-not-current-submenu .wp-menu-image img
 	box-shadow: none;
 	padding: 32px 20px;
 }
-.exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-nav, 
-.exopite-sof-wrapper.steroids_for_elementor-options .sfe-header {
+.exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-nav
+{
 	background-color: #131A24; 
 }
 

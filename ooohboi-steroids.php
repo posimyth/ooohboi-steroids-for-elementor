@@ -2,13 +2,12 @@
 /**
  * Plugin Name: OoohBoi Steroids for Elementor
  * Description: An awesome set of tools/options/settings that extend Elementor default/existing widgets and elements. It keeps the editor tidy, saves valuable resources and improves the workflow.
- * Version:     2.1.10
+ * Version:     2.1.11
  * Author:      OoohBoi
  * Author URI:  https://www.youtube.com/c/OoohBoi
  * Text Domain: ooohboi-steroids
  * License:     GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0
- * Requires Plugins: elementor
  * Elementor tested up to: 3.27
  * Elementor Pro tested up to: 3.27
  */
@@ -17,7 +16,7 @@ use Elementor\Core\Settings\Manager as SettingsManager;
 
 defined( 'ABSPATH' ) || die(); // Exit if accessed directly.
 
-define( 'OoohBoi_VERSION', '2.1.10' );
+define( 'OoohBoi_VERSION', '2.1.11' );
 define( 'OoohBoi_FILE', __FILE__ );
 define( 'OoohBoi_URL', plugins_url( '/', __FILE__ ) );
 

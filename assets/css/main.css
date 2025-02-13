@@ -34,10 +34,14 @@
 	pointer-events: none;
 }
 
-/* GLIDER */
-.ob-is-glider > .elementor-container, 
+/* GLIDER */ 
 .ob-is-glider .ob-swiper-bundle {
 	visibility: hidden; 
+	overflow: hidden;
+	position: relative;
+}
+.ob-is-glider > .elementor-container{
+	visibility: visible; 
 	overflow: hidden;
 	position: relative;
 }

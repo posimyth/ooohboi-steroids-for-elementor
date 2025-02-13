@@ -1583,6 +1583,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 			$option_title = ( ! empty( $this->config['option_title'] ) ) ? $this->config['option_title'] : $this->config['title'];
 
 			echo '<header class="exopite-sof-header exopite-sof-header-js">';
+			echo '<img src="' . SFE_DIR_URL . 'img/ooohboi-poopart-icon.png" alt="OoohBoi Steroids for Elementor" style="margin-right:10px;height:28px;width:28px;display:inline-flex;">';
 			echo '<h1>' . $option_title . $current_language_title . '</h1>';
 
 			/*
