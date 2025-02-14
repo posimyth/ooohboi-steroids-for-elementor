@@ -1624,27 +1624,15 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 		public function display_options_section_header( $section ) {
 
 			$visibility = ' hide';
+
 			if ( $section === reset( $this->fields ) ) {
 				$visibility = '';
 			}
 
-            $section_name = ( isset( $section['name'] ) ) ? $section['name'] : '';
-            $section_icon = ( isset( $section['icon'] ) ) ? $section['icon'] : '';
+            $section_name = isset( $section['name'] ) ? $section['name'] : '';
+            $section_icon = isset( $section['icon'] ) ? $section['icon'] : '';
 
 			echo '<div class="exopite-sof-section exopite-sof-section-' . $section_name . $visibility . '">';
-
-			if ( isset( $section['title'] ) && ! empty( $section['title'] ) ) {
-
-				$icon_before = '';
-				if ( strpos( $section_icon, 'dashicon' ) !== false ) {
-					$icon_before = 'dashicons-before ';
-				} elseif ( strpos( $section_icon, 'fa' ) !== false ) {
-					$icon_before = 'fa-before ';
-				}
-
-				echo '<h2 class="exopite-sof-section-header" data-section="' . $section_name . '"><span class="' . $icon_before . $section_icon . '"></span>' . $section['title'] . '</h2>';
-
-			}
 
 		}
 

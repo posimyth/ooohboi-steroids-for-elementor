@@ -35,11 +35,7 @@
 }
 
 /* GLIDER */ 
-.ob-is-glider .ob-swiper-bundle {
-	visibility: hidden; 
-	overflow: hidden;
-	position: relative;
-}
+.ob-is-glider .ob-swiper-bundle,
 .ob-is-glider > .elementor-container{
 	visibility: visible; 
 	overflow: hidden;

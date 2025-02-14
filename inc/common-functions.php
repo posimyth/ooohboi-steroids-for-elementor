@@ -189,7 +189,12 @@ $fields[] = array(
             'id'            => 'ob_use_butterbutton', 
             'title'			=> 'BUTTER BUTTON', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sDesign awesome buttons in Elementor%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => sprintf( 
+                __( '%1$sDesign awesome buttons in Elementor%2$s %3$s', 'ooohboi-steroids' ), 
+                '<span class="ob-option-desc">', 
+                '</span>',
+                '<a href="' . esc_url('https://www.youtube.com/watch?v=7fjREuvM0YY') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>' 
+            ),
             'default'       => 'yes',
         ),
         array(

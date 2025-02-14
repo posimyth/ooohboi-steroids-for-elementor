@@ -1,15 +1,10 @@
 <div class="sfe-content">
-
     <div class="container">
-
         <div class="row">
 
             <div class="col-8" style="margin-top: 30px;">
 
-                <p>
-                    <strong>What's new to <?php echo OoohBoi_Steroids::VERSION; ?>?</strong>
-                </p>
-
+                <h3 style="margin-top: 0px;">Videos</h3>
                 <ul>
                     <li>BETTER TEMPLATES LIBRARY - <a href="https://www.youtube.com/watch?v=A4lFYsk5TLs" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                     <li>HARAKIRI - <a href="https://www.youtube.com/watch?v=_jvsCCmFWJ0" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
@@ -17,17 +12,24 @@
                     <li>PAGININI - <a href="https://www.youtube.com/watch?v=LjaU-TRZAIc" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                     <li>OVERLAIZ - <a href="https://www.youtube.com/watch?v=iMm9MI120e8" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                     <li>VIDEOMASQ - <a href="https://www.youtube.com/watch?v=6es-E_xjXSE" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
+                    <li>BUTTER BUTTON - <a href="https://www.youtube.com/watch?v=7fjREuvM0YY" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                 </ul>
 
+                <hr>
+
+                <p>
+                    <strong>What's new to <?php echo OoohBoi_Steroids::VERSION; ?>?</strong>
+                </p>
                 <h3>Updated</h3>
                 <ul>
-                    <li>Renamed COMMENTZ Gravatar Switcher.</li>
-                    <li>Glider was breaking in the Elementor Editor backend.</li>
+                    <li>Performance : Remove unused HTML & CSS</li>
                 </ul>
 
                 <h3>Fixed</h3>
                 <ul>
-                    <li>Minor bug fixes & performance improvements.</li>
+                    <li>Fix : Update links for other plugins are hidden</li>
+                    <li>Fix : Glider was Breaking in the Container on the Elementor Editor Backend.</li>
+                    <li>Fix : Minor Bug Fixes & Performance Improvements</li>
                 </ul>
             </div>
 

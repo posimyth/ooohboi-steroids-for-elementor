@@ -48,6 +48,13 @@ No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 
 == Changelog == 
 
+= 2.1.13 =
+- Added : BUTTER BUTTON [Explanation Video](https://www.youtube.com/watch?v=7fjREuvM0YY)
+- Fix : Update Links for Other Plugins are Hidden
+- Fix : Glider was Breaking in the Container on the Elementor Editor backend.
+- Performance : Remove Unused HTML & CSS
+- Fix : Minor Bug Fixes & Performance Improvements
+
 = 2.1.12 =
 - Added : OVERLAIZ [Explanation Video](https://www.youtube.com/watch?v=iMm9MI120e8)
 - Added : VIDEOMASQ [Explanation Video](https://www.youtube.com/watch?v=6es-E_xjXSE)
