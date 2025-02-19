@@ -4,7 +4,7 @@ Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost 
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 2.1.12
+Stable tag: 2.1.14
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -47,6 +47,14 @@ Rest assured, you won't miss them because there will always be an eye-catching i
 No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 
 == Changelog == 
+
+= 2.1.14 =
+- Added : BREAKING BAD [Explanation Video](https://www.youtube.com/watch?v=DHjd_cOwRIg)
+- Added : SHADOUGH [Explanation Video](https://www.youtube.com/watch?v=biZpCZIFts8)
+- Added : SPACERAT [Explanation Video](https://www.youtube.com/watch?v=P8xBP3TkvDM)
+- Added : HOVERANIMATOR [Explanation Video](https://www.youtube.com/watch?v=uPB0W5OV0sc)
+- Fix : Elementor Top Bar Not Showing
+- Fix : Minor Bug Fixes & Performance Improvements
 
 = 2.1.13 =
 - Added : BUTTER BUTTON [Explanation Video](https://www.youtube.com/watch?v=7fjREuvM0YY)

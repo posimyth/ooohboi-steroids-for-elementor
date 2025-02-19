@@ -13,6 +13,10 @@
                     <li>OVERLAIZ - <a href="https://www.youtube.com/watch?v=iMm9MI120e8" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                     <li>VIDEOMASQ - <a href="https://www.youtube.com/watch?v=6es-E_xjXSE" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                     <li>BUTTER BUTTON - <a href="https://www.youtube.com/watch?v=7fjREuvM0YY" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
+                    <li>BREAKING BAD - <a href="https://www.youtube.com/watch?v=DHjd_cOwRIg" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
+                    <li>SHADOUGH - <a href="https://www.youtube.com/watch?v=biZpCZIFts8" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
+                    <li>SPACERAT - <a href="https://www.youtube.com/watch?v=P8xBP3TkvDM" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
+                    <li>HOVERANIMATOR - <a href="https://www.youtube.com/watch?v=uPB0W5OV0sc" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                 </ul>
 
                 <hr>
