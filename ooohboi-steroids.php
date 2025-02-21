@@ -20,7 +20,6 @@ define( 'OoohBoi_VERSION', '2.1.15' );
 define( 'OoohBoi_FILE', __FILE__ );
 define( 'OoohBoi_URL', plugins_url( '/', __FILE__ ) );
 define( 'OoohBoi_PATH', plugin_dir_path( __FILE__ ) );
-define( 'OoohBoi_FILE', __FILE__ );
 
 /**
  * Main OoohBoi Steroids Class

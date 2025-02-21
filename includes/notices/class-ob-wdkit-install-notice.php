@@ -16,14 +16,14 @@ if ( ! class_exists( 'Ob_Wdkit_Install_Notice' ) ) {
 	/**
 	 * This class used for only elementor widget load
 	 *
-	 * @since 5.3.3
+	 * @since 2.1.15
 	 */
 	class Ob_Wdkit_Install_Notice {
 
 		/**
 		 * Instance
 		 *
-		 * @since 5.3.3
+		 * @since 2.1.15
 		 * @access private
 		 * @static
 		 * @var instance of the class.
@@ -61,21 +61,20 @@ if ( ! class_exists( 'Ob_Wdkit_Install_Notice' ) ) {
 		 * Perform some compatibility checks to make sure basic requirements are meet.
 		 *
 		 * @since 5.2.3
-		 * @version 5.3.3
 		 * @access public
 		 */
 		public function __construct() {
 			/**Install Notice*/
 			add_action( 'admin_notices', array( $this, 'wdesignkit_notice_install_plugin' ) );
 
-			/**TPAG Close Popup and Notice*/
-			add_action( 'wp_ajax_wdesignkit_dismiss_notice', array( $this, 'wdesignkit_dismiss_notice' ) );
+			/** Close Notice*/
+			add_action( 'wp_ajax_wdesignkit_dismiss_noticee', array( $this, 'wdesignkit_dismiss_notice' ) );
 		}
 
 		/**
 		 * Plugin Active Notice Installing Notice show
 		 *
-		 * @since 5.3.3
+		 * @since 2.1.15
 		 */
 
         public function wdesignkit_notice_install_plugin() {
@@ -85,17 +84,12 @@ if ( ! class_exists( 'Ob_Wdkit_Install_Notice' ) ) {
 			$file_path   = $this->w_d_s_i_g_n_k_i_t_slug;
             $screen      = get_current_screen();
 			$nonce       = wp_create_nonce( 'wdesignkit-plugin-notice' );
-			$ajaxurl       = admin_url('admin-ajax.php');
+			$ob_ajaxurl  = admin_url('admin-ajax.php');
             $pt_exclude  = ! empty( $screen->post_type ) && in_array( $screen->post_type, array( 'elementor_library', 'product' ), true );
 			$parent_base = ! empty( $screen->parent_base ) && in_array( $screen->parent_base, array( 'edit', 'plugins' ), true );
 			$get_action  = ! empty( $_GET['action'] ) ? sanitize_text_field( wp_unslash( $_GET['action'] ) ) : '';
 
             if ( ! $parent_base || $pt_exclude ) {
-				return;
-			}
-
-            $notice_dismissed = get_user_meta( get_current_user_id(), 'wdesignkit_dismissed_notice', true );
-            if ( ! empty( $notice_dismissed ) ) {
 				return;
 			}
 
@@ -121,31 +115,29 @@ if ( ! class_exists( 'Ob_Wdkit_Install_Notice' ) ) {
 
             ?>
 			<script>
-				jQuery('.ob-wdesignkit-notice .notice-dismiss').on('click', function() {
+				jQuery(document).on('click', '.ob-wdesignkit-notice .notice-dismiss', function(e) {
+					e.preventDefault();
+					
 					jQuery.ajax({
-						url: "<?php echo esc_url( $ajaxurl ); ?>",
+						url: "<?php echo esc_url( $ob_ajaxurl ); ?>",
 						type: 'POST',
 						data: {
-							action: 'wdesignkit_dismiss_notice',
+							action: 'wdesignkit_dismiss_noticee',
 							security: "<?php echo esc_html( $nonce ); ?>",
-							type: 'wdesignkit_notice',
 						},
 						success: function(response) {
-							jQuery('.wdesignkit-notice').hide();
+							jQuery('.ob-wdesignkit-notice').hide();
 						}
 					});
 				});
 			</script>
 			<?php
         }
-
-        
+ 
 		/**
-		 * It's is use for Save key in database
-		 * TAPG Notice and TAG Popup Dismisse
+		 * It's is use for Save key in database.
 		 *
-		 * @since 5.3.3
-		 * @access public
+		 * @since 2.1.15
 		 */
         public function wdesignkit_dismiss_notice() {
 			$get_security = ! empty( $_POST['security'] ) ? sanitize_text_field( wp_unslash( $_POST['security'] ) ) : '';
@@ -160,12 +152,10 @@ if ( ! class_exists( 'Ob_Wdkit_Install_Notice' ) ) {
 
 			$get_type = ! empty( $_POST['type'] ) ? sanitize_text_field( wp_unslash( $_POST['type'] ) ) : '';
 
-			print_r( $get_type );
-			if ( 'wdesignkit_notice' === $get_type ) {
+			// if ( 'wdesignkit_notice' === $get_type ) {
 				update_option( 'wdesignkit_dismissed_notice', true );
-				print_r( 'updated' );
 				// update_user_meta( get_current_user_id(), 'wdesignkit_dismissed_notice', true );
-			} 
+			// } 
 			
 			wp_send_json_success();
 		}

@@ -27,6 +27,8 @@ An awesome set of tools, options and settings that expand Elementor defaults. In
 - Bulk-export and bulk-import support
 - Keep template name on export
 
+### Complete Full Tutorial of OoohBoi Extensions <a href="https://www.youtube.com/playlist?list=PLFRO-irWzXaJtlEHcu5yc6azFrvtPKXn0"> Watch Now</a>
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.

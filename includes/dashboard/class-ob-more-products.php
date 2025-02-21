@@ -16,14 +16,14 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 	/**
 	 * This class used for only load All Notice Files
 	 *
-	 * @since 2.1.14
+	 * @since 2.1.15
 	 */
 	class Class_Ob_More_Products {
 
 		/**
 		 * Instance
 		 *
-		 * @since 2.1.14
+		 * @since 2.1.15
 		 * @var instance of the class.
 		 */
 		private static $instance = null;
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 		 *
 		 * Ensures only one instance of the class is loaded or can be loaded.
 		 *
-		 * @since 2.1.14
+		 * @since 2.1.15
 		 * @return instance of the class.
 		 */
 		public static function instance() {
@@ -49,7 +49,7 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 		 *
 		 * Perform some compatibility checks to make sure basic requirements are meet.
 		 *
-		 * @since 2.1.14
+		 * @since 2.1.15
 		 */
 		public function __construct() {
 			$this->more_products();
@@ -58,15 +58,15 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
         public function more_products() {
             $wkit_install_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=wdesignkit' ), 'install-plugin_wdesignkit' );
 
-            $output = ' <style> .exopite-sof-section.exopite-sof-section-our_products{ height: 100vh; } </style>';
+            $output = ' <style> .exopite-sof-sections{background: #f7f7f7 !important;} .exopite-sof-section.exopite-sof-section-our_products{ height: 100vh; } </style>';
             
             $output .= '<div class="ob_products_box_cover_main" style="margin: 25px;">';
-                $output .= '<div class="ooohboi_product_box" style="width: 100%; display: flex; gap: 20px; justify-content: space-between; box-sizing: border-box; padding: 40px; background-color: #ffffff; border-radius: 8px; position: relative;">';
-                    $output .= '<div class="ooohboi_product_logo_title_cover" style="display: flex; justify-content: flex-start; align-items: center; gap: 12px;">';
-                        $output .= '<div class="ooohboi_product_logo" style="width: 50px; height: 50px; border-radius: 100%; position: relative;">';
-                            $output .= '<img src="' . esc_url( OoohBoi_URL . 'assets/img/products/wdesignkit-product-logo.png' ) . ' " style="width: 50px; height: 100%; position: relative;">';
+                $output .= '<div class="ooohboi_product_box" style="position: relative; width: 100%; display: flex; justify-content: space-between; box-sizing: border-box; padding: 30px; background-color: #ffffff; border-radius: 8px;">';
+                    $output .= '<div class="ooohboi_product_logo_title_cover" style="display: flex; justify-content: flex-start; align-items: center; gap: 15px;">';
+                        $output .= '<div class="ooohboi_product_logo" style="position: relative; width: 60px; height: 60px;">';
+                            $output .= '<img src="' . esc_url( OoohBoi_URL . 'assets/img/products/wdesignkit-product-logo.png' ) . ' " style="position: relative; width: 100%; height: 100%; ">';
                         $output .= '</div>';
-                        $output .= '<h4 class="ooohboi_product_name tpae-in-sec-heading" style="font-size: 14px;"> WDesignKit – Templates, Widgets, Cloud Storage & More </h4>';
+                        $output .= '<h4 class="ooohboi_product_name tpae-in-sec-heading" style="font-size: 16px;"> WDesignKit – Templates, Widgets, Cloud Storage & More </h4>';
                     $output .= '</div>';
                     $output .= '<div class="ooohboi-installation" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px;">';
                     
@@ -86,6 +86,12 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
             echo $output;
         }
         
+		/**
+		 *
+		 * It is Use for Check Plugin Dependency.
+		 *
+		 * @since 2.1.15
+		 */
         public function check_plugin( $plugin, $plugin_slug ) {
             if ( defined( 'WDKIT_VERSION' ) ) {
 				return true;
@@ -110,7 +116,7 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 		 *
 		 * It is Use for get plugin list.
 		 *
-		 * @since 2.1.14
+		 * @since 2.1.15
 		 */
 		private function get_plugins() {
 			if ( ! function_exists( 'get_plugins' ) ) {
@@ -123,7 +129,6 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 
 	Class_Ob_More_Products::instance();
 }
-
 
 
 
