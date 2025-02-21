@@ -1219,27 +1219,31 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework' ) ) :
 					continue;
 				}
 
-				foreach ( $section['fields'] as $field ) {
+				if( ! empty( $section['unique_id'] ) && $section['unique_id'] === 'our_products' ){
+					require_once OoohBoi_PATH . 'includes/dashboard/class-ob-more-products.php';
+				}else{
+					foreach ( $section['fields'] as $field ) {
 
-					// If has subfields
-					if ( ( $callbacks['main'] == 'include_field_class' || $callbacks['main'] == 'enqueue_field_class' ) && isset( $field['fields'] ) ) {
-
-						foreach ( $field['fields'] as $subfield ) {
-
-							if ( $callbacks['main'] ) {
-								call_user_func( array( $this, $callbacks['main'] ), $subfield );
+						// If has subfields
+						if ( ( $callbacks['main'] == 'include_field_class' || $callbacks['main'] == 'enqueue_field_class' ) && isset( $field['fields'] ) ) {
+	
+							foreach ( $field['fields'] as $subfield ) {
+	
+								if ( $callbacks['main'] ) {
+									call_user_func( array( $this, $callbacks['main'] ), $subfield );
+								}
+	
 							}
-
+	
 						}
-
+	
+						if ( $callbacks['main'] ) {
+							call_user_func( array( $this, $callbacks['main'] ), $field );
+						}
+	
+						// main
+	
 					}
-
-					if ( $callbacks['main'] ) {
-						call_user_func( array( $this, $callbacks['main'] ), $field );
-					}
-
-					// main
-
 				}
 
 				// after

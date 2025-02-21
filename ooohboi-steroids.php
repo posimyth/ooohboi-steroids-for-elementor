@@ -2,7 +2,7 @@
 /**
  * Plugin Name: OoohBoi Steroids for Elementor
  * Description: An awesome set of tools/options/settings that extend Elementor default/existing widgets and elements. It keeps the editor tidy, saves valuable resources and improves the workflow.
- * Version:     2.1.14
+ * Version:     2.1.15
  * Author:      OoohBoi
  * Author URI:  https://www.youtube.com/c/OoohBoi
  * Text Domain: ooohboi-steroids
@@ -16,9 +16,11 @@ use Elementor\Core\Settings\Manager as SettingsManager;
 
 defined( 'ABSPATH' ) || die(); // Exit if accessed directly.
 
-define( 'OoohBoi_VERSION', '2.1.14' );
+define( 'OoohBoi_VERSION', '2.1.15' );
 define( 'OoohBoi_FILE', __FILE__ );
 define( 'OoohBoi_URL', plugins_url( '/', __FILE__ ) );
+define( 'OoohBoi_PATH', plugin_dir_path( __FILE__ ) );
+define( 'OoohBoi_FILE', __FILE__ );
 
 /**
  * Main OoohBoi Steroids Class
@@ -173,6 +175,9 @@ final class OoohBoi_Steroids {
 			add_action( 'admin_notices', [ $this, 'admin_notice_minimum_php_version' ] );
 			return;
 		}
+
+		// Notice.
+		require_once OoohBoi_PATH . 'includes/notices/class-ob-notices-main.php';
 
 		// load common stuff functions
 		require plugin_dir_path( __FILE__ ) . 'inc/exopite-simple-options/exopite-simple-options-framework-class.php';

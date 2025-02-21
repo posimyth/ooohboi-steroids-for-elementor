@@ -48,13 +48,14 @@ final class OoohBoi_Icobox {
             ]
         );
         // --------------------------------------------------------------------------------------------- CONTROL Box Shadow Regular
+		// 2.1.15 patch
 		$element->add_group_control(
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => '_ob_icobox_shadow', 
 				'label' => __( 'Box Shadow', 'ooohboi-steroids' ), 
 				'separator' => 'before', 
-				'selector' => '{{WRAPPER}} .elementor-icon-box-img', 
+				'selector' => '{{WRAPPER}} .elementor-icon-box-img, {{WRAPPER}} .elementor-icon-box-wrapper .elementor-icon-box-icon', 
 				'fields_options' => [
 					'box_shadow' => [
 						'default' => [

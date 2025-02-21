@@ -216,6 +216,7 @@ class OoohBoi_Counterz {
         );
 
         // ------------------------------------------------------------------------- CONTROL: Counterz title alignment
+		// 2.1.15 patch
 		$element->add_responsive_control(
 			'_ob_counterz_title_align',
 			[
@@ -223,12 +224,12 @@ class OoohBoi_Counterz {
 				'type' => Controls_Manager::SELECT,
                 'default' => 'center', 
 				'options' => [
-					'left' => __( 'Left', 'ooohboi-steroids' ),
+					'flex-start' => __( 'Left', 'ooohboi-steroids' ),
 					'center' => __( 'Center', 'ooohboi-steroids' ), 
-					'right' => __( 'Right', 'ooohboi-steroids' ), 
+					'flex-end' => __( 'Right', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-use-counterz .elementor-counter-title' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}}.ob-use-counterz .elementor-counter-title' => 'justify-content: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_use_counterz' => 'yes', 

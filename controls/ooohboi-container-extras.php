@@ -77,10 +77,11 @@ class OoohBoi_Container_Extras {
     
 	public static function add_section( Element_Base $element ) {
 
+		// 2.1.15 patch
         $element->add_control(
             '_ob_container_extras',
             [
-                'label' => 'C O N T A I N E R &nbsp; E X R A S',
+                'label' => 'C O N T A I N E R &nbsp; E X T R A S',
                 'type' => Controls_Manager::HEADING,
 				'separator' => 'before', 
             ]

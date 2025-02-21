@@ -326,12 +326,16 @@ $fields[] = array(
         ), 
         */
         array(
-            'id'            => 'ob_use_counterz', 
-            'title'			=> 'COUNTERZ', 
-            'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sMore styling options to the Counter widget%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
-            'default'       => 'yes',
-        ), 
+            'id'          => 'ob_use_counterz',
+            'title'       => 'COUNTERZ',
+            'type'        => 'switcher',
+            'description' => sprintf( __( '%sMore styling options to the Counter widget.%s <a href="%s" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">%s</a>', 'ooohboi-steroids' ),
+                '<span class="ob-option-desc">', '</span>', 
+                esc_url('https://youtu.be/Q9gJ7b-tcJA'),
+                esc_html__('Video Here', 'ooohboi-steroids')
+            ),
+            'default'     => 'yes',
+        ),        
         array(
             'id'            => 'ob_use_tabbr', 
             'title'			=> 'TABBR', 
@@ -468,6 +472,21 @@ $fields[] = array(
             'default'       => 'no',
         ),
 
+    ),
+);
+
+$fields[] = array(
+    'name'   => 'our_products',
+    'title'  => esc_attr__( 'More Products', 'ooohboi-steroids' ), 
+    'icon'   => 'dashicons-screenoptions',
+    'unique_id'   => 'our_products',
+    'fields' => array(
+        array(
+            'id'      => 'our_products_intro',
+            'type'    => 'content',
+            'content' => sprintf( __( '%sThe following libraries are currently available with Steroids for Elementor add-on. Enable or disable particular library by switching it ON or OFF.%s', 'ooohboi-steroids' ), '<p>', '</p>' ), 
+            'class'   => 'sfe-intro', 
+        ),
     ),
 );
 

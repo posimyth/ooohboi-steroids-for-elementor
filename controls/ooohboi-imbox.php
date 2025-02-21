@@ -102,7 +102,7 @@ final class OoohBoi_Imbox {
                 ],
 			]
 		);
-		// 1.9.6 patch
+		// 2.1.15 patch
 		$element->add_responsive_control(
 			'_ob_imbox_no_collapse_cont_align',
 			[
@@ -111,12 +111,12 @@ final class OoohBoi_Imbox {
 				'type' => Controls_Manager::SELECT,
                 'default' => 'center', 
 				'options' => [
-					'flex-start' => __( 'Start', 'ooohboi-steroids' ),
+					'start' => __( 'Start', 'ooohboi-steroids' ),
 					'center' => __( 'Center', 'ooohboi-steroids' ), 
-					'flex-end' => __( 'End', 'ooohboi-steroids' ), 
+					'end' => __( 'End', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}}.elementor-position-left .elementor-image-box-wrapper .elementor-image-box-content, {{WRAPPER}}.elementor-position-right .elementor-image-box-wrapper .elementor-image-box-content' => 'align-self: {{VALUE}};', 
+					'{{WRAPPER}} .elementor-image-box-wrapper .elementor-image-box-content, {{WRAPPER}} .elementor-image-box-wrapper .elementor-image-box-content' => 'text-align: {{VALUE}};', 
 				],
 				'condition' => [
 					'_ob_imbox_no_collapse' => 'inherit',
