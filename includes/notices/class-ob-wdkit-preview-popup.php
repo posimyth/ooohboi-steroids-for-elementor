@@ -264,7 +264,7 @@ if ( ! class_exists( 'Ob_Wdkit_Preview_Popup' ) ) {
 							<a class="ob-wdesign-install" href="#">
 								<span class="ob-enable-text"><?php echo esc_html__( 'Enable Templates', 'ooohboi-steroids' ); ?></span>
 								<div class="ob-wkit-publish-loader">
-									<div class="tp-wb-loader-circle"></div>
+									<div class="ob-wb-loader-circle"></div>
 								</div>
 							</a>
 						<?php } else { ?>
