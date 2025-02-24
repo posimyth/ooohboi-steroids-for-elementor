@@ -3,8 +3,24 @@
         <div class="row">
 
             <div class="col-8" style="margin-top: 30px;">
+                <p>
+                    <strong>What's new to <?php echo OoohBoi_Steroids::VERSION; ?>?</strong>
+                </p>
+                <!-- <h3>Updated</h3>
+                <ul>
+                    <li>Update : PAGININI Video Explanation Video</li>
+                </ul> -->
 
-                <h3 style="margin-top: 0px;">Videos</h3>
+                <h3>Fixed</h3>
+                <ul>
+                    <li>Fix : Removes Unused CSS by adding conditions</li>
+                    <li>Fix : Elementor Top Bar is Overlaying</li>
+                    <li>Fix : Minor Bug Fixes & Performance Improvements</li>
+                </ul>
+
+                <hr>
+
+                <h3 style="margin-top: 15px;">Videos</h3>
                 <ul>
                     <li>BETTER TEMPLATES LIBRARY - <a href="https://www.youtube.com/watch?v=A4lFYsk5TLs" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                     <li>HARAKIRI - <a href="https://www.youtube.com/watch?v=_jvsCCmFWJ0" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
@@ -20,24 +36,6 @@
                     <li>COUNTERZ - <a href="https://www.youtube.com/watch?v=Q9gJ7b-tcJA" target="_blank" rel="noopener noreferrer">Explanation Video</a></li>
                 </ul>
 
-                <hr>
-
-                <p>
-                    <strong>What's new to <?php echo OoohBoi_Steroids::VERSION; ?>?</strong>
-                </p>
-                <h3> Added & Updated</h3>
-                <ul>
-                    <li>Added : COUNTERZ Explanation Video</li>
-                    <li>Update : PAGININI Video Explanation Video</li>
-                </ul>
-
-                <h3>Fixed</h3>
-                <ul>
-                    <li>Fix : Container Extras : Spelling Mistake.</li>
-                    <li>Fix : COUNTERZ : Align Title Not Working.</li>
-                    <li>Fix : ICOBOX : Box Shadow Not Working</li>
-                    <li>Fix : IMBOX : Content Position Not Working</li>
-                </ul>
             </div>
 
             <div class="col-4">
@@ -58,7 +56,7 @@
 
             <div class="col-12">
                 <hr />
-                <p class="small-text">Current version: <?php echo OoohBoi_Steroids::VERSION; ?></p>
+                <p class="small-text">Current version: <?php echo OoohBoi_VERSION; ?></p>
             </div>
 
         </div>

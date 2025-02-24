@@ -2,7 +2,7 @@
 /**
  * Plugin Name: OoohBoi Steroids for Elementor
  * Description: An awesome set of tools/options/settings that extend Elementor default/existing widgets and elements. It keeps the editor tidy, saves valuable resources and improves the workflow.
- * Version:     2.1.15
+ * Version:     2.1.16
  * Author:      OoohBoi
  * Author URI:  https://www.youtube.com/c/OoohBoi
  * Text Domain: ooohboi-steroids
@@ -16,7 +16,7 @@ use Elementor\Core\Settings\Manager as SettingsManager;
 
 defined( 'ABSPATH' ) || die(); // Exit if accessed directly.
 
-define( 'OoohBoi_VERSION', '2.1.15' );
+define( 'OoohBoi_VERSION', '2.1.16' );
 define( 'OoohBoi_FILE', __FILE__ );
 define( 'OoohBoi_URL', plugins_url( '/', __FILE__ ) );
 define( 'OoohBoi_PATH', plugin_dir_path( __FILE__ ) );
@@ -216,31 +216,27 @@ final class OoohBoi_Steroids {
 			if( isset( $ob_settings_options[ 'ob_use_three' ] ) && $ob_settings_options[ 'ob_use_three' ] && 'yes' === $ob_settings_options[ 'ob_use_three' ] ) self::$sfe_lib_three = 1; 
 		}
 
-		// admin styles
-		add_action( 'admin_enqueue_scripts', function() {
+		/**
+		 * Admin Style
+		 * 
+		 * @version 2.1.16
+		 */
+		add_action( 'admin_enqueue_scripts', function( $hook ) {
+			$post_type = get_current_screen()->post_type ?? '';
 
-			/* TODO: better way to handle installed components */
+			if( 'toplevel_page_steroids_for_elementor' === $hook ){
+                wp_enqueue_style( 'ooohboi-steroids-admin', OoohBoi_URL . 'assets/css/admin.css' , [], OoohBoi_VERSION );
+            }
+
 			$tmp_ob_settings_options = get_exopite_sof_option( 'steroids_for_elementor' );
-
-			wp_enqueue_style(
-				'ooohboi-steroids-admin', 
-				plugins_url( 'assets/css/admin.css', __FILE__ ),
-				[],
-				self::VERSION . '17012022c'
-			);
+			
 			/* better templates library */
-			if( isset( $tmp_ob_settings_options[ 'ob_use_btl' ] ) && $tmp_ob_settings_options[ 'ob_use_btl' ] && 'yes' === $tmp_ob_settings_options[ 'ob_use_btl' ] ) {
-
-				wp_enqueue_style(
-					'ooohboi-steroids-admin-btl', 
-					plugins_url( 'assets/css/btl-admin.css', __FILE__ ),
-					[],
-					self::VERSION . '18012023e'
-				);
-
+			if( 'elementor_library' === $post_type ){
+				if( ! empty( $tmp_ob_settings_options[ 'ob_use_btl' ] ) && 'yes' === $tmp_ob_settings_options[ 'ob_use_btl' ] ) {
+					wp_enqueue_style( 'ooohboi-steroids-admin-btl',  OoohBoi_URL . 'assets/css/btl-admin.css', [], OoohBoi_VERSION );
+					wp_enqueue_media();
+				}
 			}
-
-			wp_enqueue_media();
 		} );
 
 		// de-activation hook 

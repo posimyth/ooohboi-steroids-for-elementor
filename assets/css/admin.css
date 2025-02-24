@@ -8,6 +8,10 @@
 	display: none !important;
 }
 
+.toplevel_page_steroids_for_elementor .ob-wdesignkit-notice{
+	display: flex !important;
+}
+
 .toplevel_page_steroids_for_elementor #e-admin-top-bar-root{
 	display: none !important;
 }
