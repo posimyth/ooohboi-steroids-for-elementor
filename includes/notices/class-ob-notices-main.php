@@ -77,19 +77,19 @@ if ( ! class_exists( 'Ob_Notices_Main' ) ) {
 				'plugin_slug' => 'wdesignkit/wdesignkit.php',
 			);
 
-            // if ( current_user_can( 'install_plugins' ) ) {
-			// 	include OoohBoi_PATH . 'includes/notices/class-ob-wdkit-install-notice.php';
+            if ( current_user_can( 'install_plugins' ) ) {
+				include OoohBoi_PATH . 'includes/notices/class-ob-wdkit-install-notice.php';
 
-			// 	$option_value = get_option( 'Ooohboi_Wdkit_Preview_Popup' );
-			// 	if ( empty( $option_value ) || 'yes' !== $option_value ) {	
-			// 		$theplus_details = $this->oohboi_check_plugins_depends( $theplus_plugins );
-			// 		$wdesignkit_details = $this->oohboi_check_plugins_depends( $wdesignkit_plugins );
+				$option_value = get_option( 'Ooohboi_Wdkit_Preview_Popup' );
+				if ( empty( $option_value ) || 'yes' !== $option_value ) {	
+					$theplus_details = $this->oohboi_check_plugins_depends( $theplus_plugins );
+					$wdesignkit_details = $this->oohboi_check_plugins_depends( $wdesignkit_plugins );
 
-					// if( ( !empty( $theplus_details[0]['status'] ) && 'unavailable' == $theplus_details[0]['status'] ) && ( !empty( $wdesignkit_details[0]['status'] ) && 'unavailable' == $wdesignkit_details[0]['status'] ) ){
+					if( ( !empty( $theplus_details[0]['status'] ) && 'unavailable' == $theplus_details[0]['status'] ) && ( !empty( $wdesignkit_details[0]['status'] ) && 'unavailable' == $wdesignkit_details[0]['status'] ) ){
 						include OoohBoi_PATH . 'includes/notices/class-ob-wdkit-preview-popup.php';
-			// 		}
-			// 	}
-			// }
+					}
+				}
+			}
 		}
 
 		/**
