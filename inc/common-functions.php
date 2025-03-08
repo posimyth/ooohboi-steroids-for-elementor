@@ -229,7 +229,14 @@ $fields[] = array(
             'id'            => 'ob_use_photomorph', 
             'title'			=> 'PHOTOMORPH', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAllows you to add the clip-path to the Image widget for Normal and Hover state%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    __( '%1$sAllows you to add the clip-path to the Image widget for Normal and Hover state%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a class="ooohboi-video-link" href="' . esc_url('https://www.youtube.com/watch?v=h2tSgoahK7s') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
@@ -257,7 +264,14 @@ $fields[] = array(
             'id'            => 'ob_use_imbox', 
             'title'			=> 'IMBOX', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sImage Box widget extra controls', 'ooohboi-steroids%s' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    __( '%1$sImage Box widget extra controls%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a class="ooohboi-video-link" href="' . esc_url('https://www.youtube.com/watch?v=qCnalXujsKI') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
@@ -285,14 +299,28 @@ $fields[] = array(
             'id'            => 'ob_use_kontrolz', 
             'title'			=> 'KONTROLZ', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAllows you to additionaly style Image Carousel and Media Carousel controls%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    __( '%1$sAllows you to additionally style Image Carousel and Media Carousel controls%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a class="ooohboi-video-link" href="' . esc_url('https://www.youtube.com/watch?v=3y72JAvYAp4') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
             'id'            => 'ob_use_widgetstalker', 
             'title'			=> 'WIDGET STALKER', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sStack widgets like flex elements%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    __( '%1$sStack widgets like flex elements%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a class="ooohboi-video-link" href="' . esc_url('https://www.youtube.com/watch?v=lkUoiiQQSk4') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),
         array(
@@ -306,14 +334,28 @@ $fields[] = array(
             'id'            => 'ob_use_bullet', 
             'title'			=> 'BULLET', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sAllows you to move the Icon List widget bullet to top%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    __( '%1$sAllows you to move the Icon List widget bullet to top%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a class="ooohboi-video-link" href="' . esc_url('https://www.youtube.com/watch?v=86tNQnmVopc') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ),  
         array(
             'id'            => 'ob_use_container_extras', 
             'title'			=> 'CONTAINER EXTRAS', 
             'type'			=> 'switcher',
-            'description'	=> sprintf( __( '%sJust a few extra Container settings which can make your life easier (for Elementor 3.6 and above)%s', 'ooohboi-steroids' ), '<span class="ob-option-desc">', '</span>' ), 
+            'description' => wp_kses_post(
+                sprintf(
+                    __( '%1$sJust a few extra Container settings which can make your life easier (for Elementor 3.6 and above)%2$s %3$s', 'ooohboi-steroids' ),
+                    '<span class="ob-option-desc">',
+                    '</span>',
+                    '<a class="ooohboi-video-link" href="' . esc_url('https://www.youtube.com/watch?v=sCrg7Clp-Ow') . '" target="_blank" rel="noopener noreferrer" style="white-space: nowrap;">' . esc_html__('Video Here', 'ooohboi-steroids') . '</a>'
+                )
+            ),
             'default'       => 'yes',
         ), 
         /*
