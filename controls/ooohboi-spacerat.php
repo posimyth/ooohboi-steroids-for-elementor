@@ -160,7 +160,7 @@ class OoohBoi_SpaceRat {
                 'default' => false, 
                 'separator' => 'before', 
                 'selectors' => [
-                    '{{WRAPPER}}.ob-spacerat .elementor-widget-container' => 'cursor: pointer;', 
+                    '{{WRAPPER}}.ob-spacerat > div' => 'cursor: pointer;', 
                 ],
                 'condition' => [
 					'_ob_spacerat_use' => 'yes',
@@ -205,7 +205,7 @@ class OoohBoi_SpaceRat {
 					'url' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-image: url("{{URL}}"); mask-image: url("{{URL}}"); -webkit-mask-mode: alpha; mask-mode: alpha;',
+					'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-image: url("{{URL}}"); mask-image: url("{{URL}}"); -webkit-mask-mode: alpha; mask-mode: alpha;',
 				],
 				'condition' => [ 
                     '_ob_spacerat_use' => 'yes', 
@@ -233,7 +233,7 @@ class OoohBoi_SpaceRat {
 					'bottom right' => __( 'Bottom Right', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-position: {{VALUE}}; mask-position: {{VALUE}};',
+					'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-position: {{VALUE}}; mask-position: {{VALUE}};',
 				],
 				'condition' => [ 
                     '_ob_spacerat_use' => 'yes', 
@@ -257,7 +257,7 @@ class OoohBoi_SpaceRat {
 					'initial' => __( 'Custom', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-size: {{VALUE}}; mask-size: {{VALUE}};',
+					'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-size: {{VALUE}}; mask-size: {{VALUE}};',
 				],
 				'condition' => [ 
                     '_ob_spacerat_use' => 'yes', 
@@ -288,7 +288,7 @@ class OoohBoi_SpaceRat {
 					'unit' => '%',
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+					'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 				],
 				'condition' => [ 
                     '_ob_spacerat_use' => 'yes', 
@@ -299,7 +299,7 @@ class OoohBoi_SpaceRat {
 				'device_args' => [
 					Breakpoints_Manager::BREAKPOINT_KEY_TABLET => [
 						'selectors' => [
-							'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+							'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 						],
 						'condition' => [
                             '_ob_spacerat_use' => 'yes', 
@@ -309,7 +309,7 @@ class OoohBoi_SpaceRat {
 					],
 					Breakpoints_Manager::BREAKPOINT_KEY_MOBILE => [
 						'selectors' => [
-							'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+							'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 						],
 						'condition' => [
                             '_ob_spacerat_use' => 'yes', 
@@ -334,7 +334,7 @@ class OoohBoi_SpaceRat {
 					'repeat-y' => __( 'Repeat-y', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '-webkit-mask-repeat: {{VALUE}}; mask-repeat: {{VALUE}};',
+					'{{WRAPPER}}.ob-spacerat ' => '-webkit-mask-repeat: {{VALUE}}; mask-repeat: {{VALUE}};',
 				],
 				'condition' => [ 
                     '_ob_spacerat_use' => 'yes', 
@@ -544,7 +544,7 @@ class OoohBoi_SpaceRat {
 				'type' => Controls_Manager::TEXTAREA, 
 				'rows' => 3, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-spacerat .elementor-widget-container' => '{{VALUE}}',
+					'{{WRAPPER}}.ob-spacerat ' => '{{VALUE}}',
 				],
 				'condition' => [
 					'_ob_spacerat_use' => 'yes', 

@@ -82,7 +82,7 @@ class OoohBoi_Perspektive {
 
     public static function ob_perspektive_add_section( Element_Base $element ) {
 
-        $selector = '{{WRAPPER}}.ob-use-perspektive .elementor-widget-container';
+        $selector = '{{WRAPPER}}.ob-use-perspektive ';
 
         //  create panel section
 		$element->add_control(

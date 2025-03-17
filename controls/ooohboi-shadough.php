@@ -77,7 +77,7 @@ class OoohBoi_Shadough {
 				],
 				'size_units' => [ 'px', 'em', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'filter: drop-shadow({{SIZE}}{{UNIT}} {{_ob_shadough_y.SIZE}}{{_ob_shadough_y.UNIT}} {{_ob_shadough_blur.SIZE}}{{_ob_shadough_blur.UNIT}} {{_ob_shadough_color.VALUE}});', 
+					'{{WRAPPER}} ' => 'filter: drop-shadow({{SIZE}}{{UNIT}} {{_ob_shadough_y.SIZE}}{{_ob_shadough_y.UNIT}} {{_ob_shadough_blur.SIZE}}{{_ob_shadough_blur.UNIT}} {{_ob_shadough_color.VALUE}});', 
                 ],
                 'condition' => [
 					'_ob_shadough_use' => 'yes', 
@@ -108,7 +108,7 @@ class OoohBoi_Shadough {
 				],
 				'size_units' => [ 'px', 'em', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'filter: drop-shadow({{_ob_shadough_x.SIZE}}{{_ob_shadough_x.UNIT}} {{SIZE}}{{UNIT}} {{_ob_shadough_blur.SIZE}}{{_ob_shadough_blur.UNIT}} {{_ob_shadough_color.VALUE}});', 
+					'{{WRAPPER}} ' => 'filter: drop-shadow({{_ob_shadough_x.SIZE}}{{_ob_shadough_x.UNIT}} {{SIZE}}{{UNIT}} {{_ob_shadough_blur.SIZE}}{{_ob_shadough_blur.UNIT}} {{_ob_shadough_color.VALUE}});', 
                 ],
                 'condition' => [
 					'_ob_shadough_use' => 'yes', 
@@ -137,7 +137,7 @@ class OoohBoi_Shadough {
 				],
 				'size_units' => [ 'px', 'em', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'filter: drop-shadow({{_ob_shadough_x.SIZE}}{{_ob_shadough_x.UNIT}} {{_ob_shadough_y.SIZE}}{{_ob_shadough_y.UNIT}} {{SIZE}}{{UNIT}} {{_ob_shadough_color.VALUE}});', 
+					'{{WRAPPER}} ' => 'filter: drop-shadow({{_ob_shadough_x.SIZE}}{{_ob_shadough_x.UNIT}} {{_ob_shadough_y.SIZE}}{{_ob_shadough_y.UNIT}} {{SIZE}}{{UNIT}} {{_ob_shadough_color.VALUE}});', 
                 ],
                 'condition' => [
 					'_ob_shadough_use' => 'yes', 
@@ -153,7 +153,7 @@ class OoohBoi_Shadough {
 				'type' => Controls_Manager::COLOR,
 				'default' => '#0000001C',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'filter: drop-shadow({{_ob_shadough_x.SIZE}}{{_ob_shadough_x.UNIT}} {{_ob_shadough_y.SIZE}}{{_ob_shadough_y.UNIT}} {{_ob_shadough_blur.SIZE}}{{_ob_shadough_blur.UNIT}} {{VALUE}});',
+					'{{WRAPPER}} ' => 'filter: drop-shadow({{_ob_shadough_x.SIZE}}{{_ob_shadough_x.UNIT}} {{_ob_shadough_y.SIZE}}{{_ob_shadough_y.UNIT}} {{_ob_shadough_blur.SIZE}}{{_ob_shadough_blur.UNIT}} {{VALUE}});',
                 ],
                 'condition' => [
 					'_ob_shadough_use' => 'yes', 
