@@ -154,8 +154,8 @@ class OoohBoi_Harakiri {
 					'no' => 'rotate(0deg)',
 				],
 				'selectors' => [
-                    '{{WRAPPER}}.ob-harakiri .elementor-heading-title' => 'transform: {{VALUE}};', 
-                    '{{WRAPPER}}.ob-harakiri div' => 'transform: {{VALUE}};',
+                    // '{{WRAPPER}}.ob-harakiri .elementor-heading-title' => 'transform: {{VALUE}};', 
+                    '{{WRAPPER}}.ob-harakiri > div, {{WRAPPER}}.ob-harakiri > h1, {{WRAPPER}}.ob-harakiri > h2, {{WRAPPER}}.ob-harakiri > h3, {{WRAPPER}}.ob-harakiri > h4, {{WRAPPER}}.ob-harakiri > h5, {{WRAPPER}}.ob-harakiri > h6, {{WRAPPER}}.ob-harakiri > p' => 'transform: {{VALUE}};',
 				],
 				'condition' => [
                     '_ob_use_harakiri' => 'yes', 
@@ -323,7 +323,7 @@ class OoohBoi_Harakiri {
                     ],
                     Breakpoints_Manager::BREAKPOINT_KEY_MOBILE => [
                         'selectors' => [
-                            '{{WRAPPER}} > div' => 'mix-blend-mode: {{VALUE}};', 
+                            '{{WRAPPER}}.ob-harakiri > div, {{WRAPPER}}.ob-harakiri > h1, {{WRAPPER}}.ob-harakiri > h2, {{WRAPPER}}.ob-harakiri > h3, {{WRAPPER}}.ob-harakiri > h4, {{WRAPPER}}.ob-harakiri > h5, {{WRAPPER}}.ob-harakiri > h6, {{WRAPPER}}.ob-harakiri > p' => 'mix-blend-mode: {{VALUE}};', 
                         ],
 						'condition' => [
 							'_ob_use_harakiri' => 'yes', 

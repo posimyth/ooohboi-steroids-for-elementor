@@ -208,14 +208,12 @@ a.toplevel_page_steroids_for_elementor.wp-not-current-submenu .wp-menu-image img
 }
 
 .exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-header {
-	display: flex;
 	background: none;
 	background-color: #131A24; 
 	box-shadow: none;
 	padding: 32px 20px;
 }
-.exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-nav
-{
+.exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-nav{
 	background-color: #131A24; 
 }
 
@@ -223,6 +221,13 @@ a.toplevel_page_steroids_for_elementor.wp-not-current-submenu .wp-menu-image img
 	font-size: 2.4em;
 	font-weight: 600;
 	letter-spacing: -1px;
+}
+
+@media (max-width: 700px) {
+
+	.exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-header {
+	  	display: flex;
+	}
 }
 
 /* ==== GRID SYSTEM ==== */

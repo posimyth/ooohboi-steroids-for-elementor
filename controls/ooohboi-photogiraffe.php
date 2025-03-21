@@ -25,7 +25,6 @@ class OoohBoi_PhotoGiraffe {
 	public static function init() {
 
 		add_action( 'elementor/element/image/section_style_image/before_section_end',  [ __CLASS__, 'ooohboi_photogiraffe_get_controls' ], 10, 2 );
-
     }
     
 	public static function ooohboi_photogiraffe_get_controls( $element, $args ) {
@@ -48,9 +47,9 @@ class OoohBoi_PhotoGiraffe {
 				'type' => Controls_Manager::SWITCHER, 
 				'default' => false,
                 'separator' => 'before', 
-                'selectors' => [
-                    '{{WRAPPER}}, {{WRAPPER}} > div, {{WRAPPER}} a, {{WRAPPER}} .elementor-image, {{WRAPPER}} .elementor-image > a, {{WRAPPER}} img' => 'height: 100%;', 
-                    '{{WRAPPER}} .elementor-image > img, {{WRAPPER}} img' => 'object-fit: cover; object-position: 50% 50%; height: 100%;', 
+				'selectors' => [
+                    '{{WRAPPER}}, {{WRAPPER}} > div, {{WRAPPER}} a, {{WRAPPER}} .elementor-image, {{WRAPPER}} .elementor-image > a' => 'height: 100%;', 
+                    '{{WRAPPER}} .elementor-image > img,{{WRAPPER}}.elementor-widget-image > img, {{WRAPPER}} div > img' => 'object-fit: cover; object-position: 50% 50%; height: 100%;', 
 				],
 			]
 		);
