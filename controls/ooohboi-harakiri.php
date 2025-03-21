@@ -131,7 +131,7 @@ class OoohBoi_Harakiri {
 				'selectors' => [
 					'{{WRAPPER}}.ob-harakiri' => 'writing-mode: {{VALUE}};', 
                     '{{WRAPPER}}.ob-harakiri .elementor-heading-title' => 'writing-mode: {{VALUE}};', 
-					'{{WRAPPER}}.ob-harakiri .elementor-widget-container > div' => 'writing-mode: {{VALUE}};', 
+					'{{WRAPPER}}.ob-harakiri div' => 'writing-mode: {{VALUE}};', 
                 ],
 				'condition' => [
                     '_ob_use_harakiri' => 'yes', 
@@ -155,7 +155,7 @@ class OoohBoi_Harakiri {
 				],
 				'selectors' => [
                     '{{WRAPPER}}.ob-harakiri .elementor-heading-title' => 'transform: {{VALUE}};', 
-                    '{{WRAPPER}}.ob-harakiri .elementor-widget-container > div' => 'transform: {{VALUE}};',
+                    '{{WRAPPER}}.ob-harakiri div' => 'transform: {{VALUE}};',
 				],
 				'condition' => [
                     '_ob_use_harakiri' => 'yes', 
@@ -181,7 +181,7 @@ class OoohBoi_Harakiri {
 				'selectors' => [
 					'{{WRAPPER}}.ob-harakiri' => 'inline-size: {{VALUE}}; width: unset;', 
 					'{{WRAPPER}}.ob-harakiri .elementor-heading-title' => 'inline-size: {{VALUE}};', 
-                    '{{WRAPPER}}.ob-harakiri .elementor-widget-container > div' => 'inline-size: {{VALUE}};',
+                    '{{WRAPPER}}.ob-harakiri div' => 'inline-size: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_use_harakiri' => 'yes', 
@@ -271,7 +271,7 @@ class OoohBoi_Harakiri {
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'text-indent: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} > div' => 'text-indent: {{SIZE}}{{UNIT}};',
 				], 
 				'condition' => [
                     '_ob_use_harakiri' => 'yes', 
@@ -310,12 +310,12 @@ class OoohBoi_Harakiri {
 					'luminosity' => __( 'Luminosity', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'mix-blend-mode: {{VALUE}};', 
+					'{{WRAPPER}} > div' => 'mix-blend-mode: {{VALUE}};', 
 				],
 				'device_args' => [
                     Breakpoints_Manager::BREAKPOINT_KEY_TABLET => [
                         'selectors' => [
-                            '{{WRAPPER}} .elementor-widget-container' => 'mix-blend-mode: {{VALUE}};', 
+                            '{{WRAPPER}} > div' => 'mix-blend-mode: {{VALUE}};', 
                         ],
 						'condition' => [
 							'_ob_use_harakiri' => 'yes', 
@@ -323,7 +323,7 @@ class OoohBoi_Harakiri {
                     ],
                     Breakpoints_Manager::BREAKPOINT_KEY_MOBILE => [
                         'selectors' => [
-                            '{{WRAPPER}} .elementor-widget-container' => 'mix-blend-mode: {{VALUE}};', 
+                            '{{WRAPPER}} > div' => 'mix-blend-mode: {{VALUE}};', 
                         ],
 						'condition' => [
 							'_ob_use_harakiri' => 'yes', 
@@ -398,7 +398,7 @@ class OoohBoi_Harakiri {
 					'label_off' => __( 'No', 'ooohboi-steroids' ), 
 					'return_value' => 'inherit', 
 					'selectors' => [
-						'{{WRAPPER}} .elementor-widget-container p:last-child' => 'margin-bottom: 0px;', 
+						'{{WRAPPER}} p:last-child' => 'margin-bottom: 0px;', 
 					],
 					'condition' => [
 						'_ob_use_harakiri' => 'yes', 

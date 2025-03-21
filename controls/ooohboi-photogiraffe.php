@@ -49,8 +49,8 @@ class OoohBoi_PhotoGiraffe {
 				'default' => false,
                 'separator' => 'before', 
                 'selectors' => [
-                    '{{WRAPPER}}, {{WRAPPER}} .elementor-widget-container, {{WRAPPER}} .elementor-widget-container > a, {{WRAPPER}} .elementor-image, {{WRAPPER}} .elementor-image > a' => 'height: 100%;', 
-                    '{{WRAPPER}} .elementor-image > img, {{WRAPPER}} .elementor-widget-container > img' => 'object-fit: cover; object-position: 50% 50%; height: 100%;', 
+                    '{{WRAPPER}}, {{WRAPPER}} > div, {{WRAPPER}} a, {{WRAPPER}} .elementor-image, {{WRAPPER}} .elementor-image > a, {{WRAPPER}} img' => 'height: 100%;', 
+                    '{{WRAPPER}} .elementor-image > img, {{WRAPPER}} img' => 'object-fit: cover; object-position: 50% 50%; height: 100%;', 
 				],
 			]
 		);

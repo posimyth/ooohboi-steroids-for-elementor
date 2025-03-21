@@ -79,7 +79,7 @@
 
 			runHoverAnimator: function() {
 
-                var myself = this.$element.find( '.elementor-widget-container' );
+                var myself = this.$element.children('div').first();
 
                 var parent_column = myself.parent().closest( '.ob-is-hoveranimator' );
                 if( parent_column.length ) {

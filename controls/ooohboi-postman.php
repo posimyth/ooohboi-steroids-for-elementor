@@ -134,7 +134,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -153,7 +153,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -193,7 +193,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -212,7 +212,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -231,7 +231,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -250,7 +250,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h4' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h4' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -269,7 +269,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -288,7 +288,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -307,12 +307,12 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container h1, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container h2, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container h3, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container h4, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container h5, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container h6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman h1, 
+                    {{WRAPPER}}.ob-postman h2, 
+                    {{WRAPPER}}.ob-postman h3, 
+                    {{WRAPPER}}.ob-postman h4, 
+                    {{WRAPPER}}.ob-postman h5, 
+                    {{WRAPPER}}.ob-postman h6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -350,8 +350,8 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container > ul, 
-					{{WRAPPER}}.ob-postman .elementor-widget-container > ol,
+					'{{WRAPPER}}.ob-postman  ul, 
+					{{WRAPPER}}.ob-postman ol,
 					{{WRAPPER}}.ob-postman .elementor-text-editor > ul, 
 					{{WRAPPER}}.ob-postman .elementor-text-editor > ol' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
@@ -373,7 +373,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container ul, {{WRAPPER}}.ob-postman .elementor-widget-container ol' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman ul, {{WRAPPER}}.ob-postman ol' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -392,10 +392,10 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container ul li ul, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container ol li ol, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container ul li ol, 
-                    {{WRAPPER}}.ob-postman .elementor-widget-container ol li ul' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman ul li ul, 
+                    {{WRAPPER}}.ob-postman ol li ol, 
+                    {{WRAPPER}}.ob-postman ul li ol, 
+                    {{WRAPPER}}.ob-postman ol li ul' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -414,7 +414,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-postman li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -436,7 +436,7 @@ class OoohBoi_Postman {
                     'none' => __( 'Custom', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container ul' => 'list-style-type: {{VALUE}};',
+					'{{WRAPPER}}.ob-postman ul' => 'list-style-type: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -451,9 +451,9 @@ class OoohBoi_Postman {
                 'description' => __( 'It has to be Unicode HEX escape, like \2192, or \00A9', 'ooohboi-steroids' ), 
 				'type' => Controls_Manager::TEXT, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container ul > li:before' => 'content: "{{VALUE}}\00a0 ";', 
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container ul > li' => 'display: block;', 
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container ul' => 'padding: 0;', 
+					'{{WRAPPER}}.ob-postman ul > li:before' => 'content: "{{VALUE}}\00a0 ";', 
+                    '{{WRAPPER}}.ob-postman ul > li' => 'display: block;', 
+                    '{{WRAPPER}}.ob-postman ul' => 'padding: 0;', 
 				],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -476,7 +476,7 @@ class OoohBoi_Postman {
                     'none' => __( 'Custom', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container ol' => 'list-style-type: {{VALUE}};',
+					'{{WRAPPER}}.ob-postman ol' => 'list-style-type: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -491,9 +491,9 @@ class OoohBoi_Postman {
                 'description' => __( 'It has to be Unicode HEX escape, like \2192, or \00A9', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container ol > li:before' => 'content: "{{VALUE}}\00a0 ";', 
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container ol > li' => 'display: block;', 
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container ol' => 'padding: 0;', 
+					'{{WRAPPER}}.ob-postman ol > li:before' => 'content: "{{VALUE}}\00a0 ";', 
+                    '{{WRAPPER}}.ob-postman ol > li' => 'display: block;', 
+                    '{{WRAPPER}}.ob-postman ol' => 'padding: 0;', 
 				],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -525,7 +525,7 @@ class OoohBoi_Postman {
 				'label' => __( 'Quotation Color', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container blockquote' => 'color: {{VALUE}};',
+					'{{WRAPPER}}.ob-postman blockquote' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -543,8 +543,8 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container blockquote' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container blockquote p' => 'margin: 0;', 
+					'{{WRAPPER}}.ob-postman blockquote' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+                    '{{WRAPPER}}.ob-postman blockquote p' => 'margin: 0;', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -562,8 +562,8 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container blockquote' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container blockquote p' => 'padding: 0;', 
+					'{{WRAPPER}}.ob-postman blockquote' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+                    '{{WRAPPER}}.ob-postman blockquote p' => 'padding: 0;', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -575,7 +575,7 @@ class OoohBoi_Postman {
 			[
 				'name' => '_ob_postman_quotes_typography', 
 				'label' => __( 'Quotation Typography', 'ooohboi-steroids' ), 
-				'selector' => '{{WRAPPER}}.ob-postman .elementor-widget-container blockquote', 
+				'selector' => '{{WRAPPER}}.ob-postman blockquote', 
 				'global' => [
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				], 
@@ -591,7 +591,7 @@ class OoohBoi_Postman {
 				'label' => __( 'Cite color', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container blockquote cite' => 'color: {{VALUE}};',
+					'{{WRAPPER}}.ob-postman blockquote cite' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -609,7 +609,7 @@ class OoohBoi_Postman {
 					'size' => 0,
                 ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-postman .elementor-widget-container blockquote cite' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; display: block;', 
+					'{{WRAPPER}}.ob-postman blockquote cite' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; display: block;', 
                 ],
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
@@ -621,7 +621,7 @@ class OoohBoi_Postman {
 			[
 				'name' => '_ob_postman_quotes_cite_typography', 
 				'label' => __( 'Cite typography', 'ooohboi-steroids' ), 
-				'selector' => '{{WRAPPER}}.ob-postman .elementor-widget-container blockquote cite', 
+				'selector' => '{{WRAPPER}}.ob-postman blockquote cite', 
 				'global' => [
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				], 
@@ -635,7 +635,7 @@ class OoohBoi_Postman {
             [
 				'name' => '_ob_postman_quotes_bg', 
                 'types' => [ 'classic' ], 
-                'selector' => '{{WRAPPER}}.ob-postman .elementor-widget-container blockquote::before',
+                'selector' => '{{WRAPPER}}.ob-postman blockquote::before',
 				'condition' => [
 					'_ob_postman_use' => 'yes', 
 				],
@@ -656,7 +656,7 @@ class OoohBoi_Postman {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-postman .elementor-widget-container blockquote::before' => 'opacity: {{SIZE}};',
+                    '{{WRAPPER}}.ob-postman blockquote::before' => 'opacity: {{SIZE}};',
 				],
 				'condition' => [
                     '_ob_postman_use' => 'yes', 

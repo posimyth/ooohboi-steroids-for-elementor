@@ -71,9 +71,15 @@ class OoohBoi_Glider {
         if( self::$should_script_enqueue ) return;
 
         if( 'yes' == $element->get_settings_for_display( '_ob_glider_is_slider' ) ) {
+			$theme = wp_get_theme();
 
             self::$should_script_enqueue = true;
-            self::enqueue_scripts();
+
+			if ( $theme->get( 'Name' ) === 'Twenty Twenty-Five' ){
+				add_action( 'wp_enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
+			} else {
+				self::enqueue_scripts();
+			}
 
             remove_action( 'elementor/frontend/section/before_render', [ __CLASS__, 'should_script_enqueue' ] );
 			remove_action( 'elementor/frontend/container/before_render', [ __CLASS__, 'should_script_enqueue' ] );

@@ -292,7 +292,14 @@ div[class*='ob-teleporter-'] {
 }
 
 /* Hovernimator */
-.ob-is-hoveranimator .ob-is-hoveranimal > .elementor-widget-container {
+.ob-is-hoveranimator .ob-is-hoveranimal > div,
+.ob-is-hoveranimator .ob-is-hoveranimal > h1,
+.ob-is-hoveranimator .ob-is-hoveranimal > h2,
+.ob-is-hoveranimator .ob-is-hoveranimal > h3,
+.ob-is-hoveranimator .ob-is-hoveranimal > h4,
+.ob-is-hoveranimator .ob-is-hoveranimal > h5,
+.ob-is-hoveranimator .ob-is-hoveranimal > h6,
+.ob-is-hoveranimator .ob-is-hoveranimal > img {
 	transition-property: opacity, top, left, transform, filter;
 	position: relative;
 }
@@ -524,11 +531,13 @@ body:not(.elementor-editor-active) [data-element_type="widget"].fade-in.effect-f
 }
 
 /* POSTMAN */
-.ob-postman .elementor-widget-container blockquote {
+/* .ob-postman .elementor-widget-container blockquote { */
+.ob-postman blockquote {
 	position: relative;
 	isolation: isolate;
 }
-.ob-postman .elementor-widget-container blockquote::before {
+/* .ob-postman .elementor-widget-container blockquote::before { */
+.ob-postman blockquote::before {
 	content: '';
 	position: absolute;
 	inset: 0;
