@@ -96,7 +96,7 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
                     $output .= '</div>';
                     $output .= '<div class="ooohboi-installation" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px;">';
 
-						$checkplugin = $this->check_plugin('theplus', 'the-plus-addons-for-elementor-page-builder/the-plus-addons-for-elementor-page-builder.php');
+						$checkplugin = $this->check_plugin('theplus', 'the-plus-addons-for-elementor-page-builder/theplus_elementor_addon.php');
 
                         if ( $checkplugin ) {
                             $output .= '<button class="ob-install-plugin" style="color: #14c38e; border-color: #14c38e; pointer-events: none; display: flex; min-width: 160px; gap: 5px; justify-content: center; align-items: center; font-size: 14px; font-weight: 500; background-color: transparent; padding: 11px 25px; border-radius: 5px; white-space: nowrap;  transition: 0.3slinear; text-decoration: none;"> Activated </button>';
@@ -123,7 +123,8 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 				return true;
 			} */
 
-			$installed_plugins = $this->get_plugins();
+			// $installed_plugins = $this->get_plugins();
+			$installed_plugins = get_plugins();
 
 			if ( empty( $installed_plugins ) ) {
 				return false;
@@ -155,7 +156,6 @@ if ( ! class_exists( 'Class_Ob_More_Products' ) ) {
 
 	Class_Ob_More_Products::instance();
 }
-
 
 
 
