@@ -12,9 +12,9 @@
 	display: flex !important;
 }
 
-.toplevel_page_steroids_for_elementor #e-admin-top-bar-root{
+/* .toplevel_page_steroids_for_elementor #e-admin-top-bar-root{
 	display: none !important;
-}
+} */
 
 #e-admin-top-bar-root.e-admin-top-bar--active~#wpbody #wpbody-content{
 	margin-block-start: 0px !important;
@@ -208,6 +208,7 @@ a.toplevel_page_steroids_for_elementor.wp-not-current-submenu .wp-menu-image img
 }
 
 .exopite-sof-wrapper.steroids_for_elementor-options .exopite-sof-header {
+	display: flex;
 	background: none;
 	background-color: #131A24; 
 	box-shadow: none;
