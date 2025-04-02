@@ -1,8 +1,8 @@
 /* Default add-on styles. Please note that these might get overwritten by compiler */
-.ob-has-background-overlay > .elementor-widget-container {
+.ob-has-background-overlay {
 	position: relative; 
 }
-.ob-has-background-overlay > .elementor-widget-container:before {
+.ob-has-background-overlay:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -12,7 +12,7 @@
 	z-index: -1;
 	pointer-events: none;
 }
-.ob-has-background-overlay > .elementor-widget-container:after {
+.ob-has-background-overlay:after {
 	content: "";
 	position: absolute;
 	top: 0;
