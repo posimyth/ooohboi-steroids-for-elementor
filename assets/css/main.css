@@ -381,7 +381,7 @@ body:not(.elementor-editor-active) .c-scrollbar {
 /* FADe LEFT --------------- */
 body:not(.elementor-editor-active) .elementor-section.effect-fade-left, 
 body:not(.elementor-editor-active) .elementor-column.effect-fade-left, 
-body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-left .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-left {
 	opacity: 0;
 	transition: left 1s cubic-bezier(.215, .61, .355, 1), opacity 1s cubic-bezier(.215, .61, .355, 1);
 	left: -30%;
@@ -390,7 +390,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-left
 }
 body:not(.elementor-editor-active) .fade-left.elementor-section.effect-fade-left, 
 body:not(.elementor-editor-active) .fade-left.elementor-column.effect-fade-left, 
-body:not(.elementor-editor-active) [data-element_type="widget"].fade-left.effect-fade-left .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].fade-left.effect-fade-left {
 	opacity: 1;
 	left: 0px;
 }
@@ -398,7 +398,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].fade-left.effect
 /* FADE RigHT --------------- */
 body:not(.elementor-editor-active) .elementor-section.effect-fade-right, 
 body:not(.elementor-editor-active) .elementor-column.effect-fade-right, 
-body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-right .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-right {
 	opacity: 0;
 	transition: left 1s cubic-bezier(.215, .61, .355, 1), opacity 1s cubic-bezier(.215, .61, .355, 1);
 	left: 30%;
@@ -407,7 +407,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-righ
 }
 body:not(.elementor-editor-active) .fade-right.elementor-section.effect-fade-right, 
 body:not(.elementor-editor-active) .fade-right.elementor-column.effect-fade-right, 
-body:not(.elementor-editor-active) [data-element_type="widget"].fade-right.effect-fade-right .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].fade-right.effect-fade-right {
 	opacity: 1;
 	left: 0px;
 }
@@ -415,7 +415,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].fade-right.effec
 /* FADE UP --------------- */
 body:not(.elementor-editor-active) .elementor-section.effect-fade-up, 
 body:not(.elementor-editor-active) .elementor-column.effect-fade-up, 
-body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-up .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-up {
 	opacity: 0;
 	transition: top 1s cubic-bezier(.215, .61, .355, 1), opacity 1s cubic-bezier(.215, .61, .355, 1);
 	top: -10%;
@@ -424,7 +424,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-up .
 }
 body:not(.elementor-editor-active) .fade-up.elementor-section.effect-fade-up, 
 body:not(.elementor-editor-active) .fade-up.elementor-column.effect-fade-up, 
-body:not(.elementor-editor-active) [data-element_type="widget"].fade-up.effect-fade-up .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].fade-up.effect-fade-up {
 	opacity: 1;
 	top: 0px;
 }
@@ -432,7 +432,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].fade-up.effect-f
 /* FADE DOWN --------------- */
 body:not(.elementor-editor-active) .elementor-section.effect-fade-down, 
 body:not(.elementor-editor-active) .elementor-column.effect-fade-down, 
-body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-down .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-down {
 	opacity: 0;
 	transition: top 1s cubic-bezier(.215, .61, .355, 1), opacity 1s cubic-bezier(.215, .61, .355, 1);
 	top: 10%;
@@ -441,7 +441,7 @@ body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-down
 }
 body:not(.elementor-editor-active) .fade-down.elementor-section.effect-fade-down, 
 body:not(.elementor-editor-active) .fade-down.elementor-column.effect-fade-down, 
-body:not(.elementor-editor-active) [data-element_type="widget"].fade-down.effect-fade-down .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].fade-down.effect-fade-down {
 	opacity: 1;
 	top: 0;
 }
@@ -449,14 +449,14 @@ body:not(.elementor-editor-active) [data-element_type="widget"].fade-down.effect
 /* FADE --------------- */
 body:not(.elementor-editor-active) .elementor-section.effect-fade-in, 
 body:not(.elementor-editor-active) .elementor-column.effect-fade-in, 
-body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-in .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].effect-fade-in {
 	opacity: 0;
 	transition: opacity 1s cubic-bezier(.215, .61, .355, 1);
 	transition-delay: 0.35s;
 }
 body:not(.elementor-editor-active) .fade-in.elementor-section.effect-fade-in, 
 body:not(.elementor-editor-active) .fade-in.elementor-column.effect-fade-in, 
-body:not(.elementor-editor-active) [data-element_type="widget"].fade-in.effect-fade-in .elementor-widget-container {
+body:not(.elementor-editor-active) [data-element_type="widget"].fade-in.effect-fade-in {
 	opacity: 1;
 }
 /* -------------------------- */
@@ -531,12 +531,10 @@ body:not(.elementor-editor-active) [data-element_type="widget"].fade-in.effect-f
 }
 
 /* POSTMAN */
-/* .ob-postman .elementor-widget-container blockquote { */
 .ob-postman blockquote {
 	position: relative;
 	isolation: isolate;
 }
-/* .ob-postman .elementor-widget-container blockquote::before { */
 .ob-postman blockquote::before {
 	content: '';
 	position: absolute;
