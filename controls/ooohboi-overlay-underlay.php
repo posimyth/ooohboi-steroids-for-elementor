@@ -125,7 +125,7 @@ class OoohBoi_Overlay_Underlay {
             Group_Control_Background::get_type(),
             [
 				'name' => '_ob_steroids_overlay_background', 
-                'selector' => '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before',
+                'selector' => '{{WRAPPER}}.ob-has-background-overlay:before',
 				'condition' => [
                     '_ob_poopart_use' => 'yes', 
                 ],
@@ -147,7 +147,7 @@ class OoohBoi_Overlay_Underlay {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'opacity: {{SIZE}};',
+                    '{{WRAPPER}}.ob-has-background-overlay:before' => 'opacity: {{SIZE}};',
 				],
 				'condition' => [
                     '_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -160,7 +160,7 @@ class OoohBoi_Overlay_Underlay {
             Group_Control_Css_Filter::get_type(),
             [
                 'name' => '_ob_steroids_overlay_bg_filters',
-				'selector' => '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before', 
+				'selector' => '{{WRAPPER}}.ob-has-background-overlay:before', 
 				'condition' => [
                     '_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
 					'_ob_poopart_use' => 'yes', 
@@ -186,7 +186,7 @@ class OoohBoi_Overlay_Underlay {
                     'luminosity' => 'Luminosity',
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'mix-blend-mode: {{VALUE}}',
+                    '{{WRAPPER}}.ob-has-background-overlay:before' => 'mix-blend-mode: {{VALUE}}',
 				],
 				'condition' => [
                     '_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -245,7 +245,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'width: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_w_alt' => '', 
@@ -263,7 +263,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 100% - 50px or 100% + 2em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'width: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'width: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -306,7 +306,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_h_alt' => '', 
@@ -324,7 +324,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 45% + 85px or 100% - 3em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'height: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'height: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -367,7 +367,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'top: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_y_alt' => '', 
@@ -385,7 +385,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 100% - 50px or 100% + 2em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'top: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'top: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -428,7 +428,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'left: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_x_alt' => '', 
@@ -446,7 +446,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 45% + 85px or 100% - 3em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'left: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'left: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -473,7 +473,7 @@ class OoohBoi_Overlay_Underlay {
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'transform: rotate({{SIZE}}deg);',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'transform: rotate({{SIZE}}deg);',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -507,7 +507,7 @@ class OoohBoi_Overlay_Underlay {
 			[
 				'name' => '_ob_steroids_overlay_borders', 
 				'label' => __( 'Border', 'ooohboi-steroids' ), 
-				'selector' => '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before', 
+				'selector' => '{{WRAPPER}}.ob-has-background-overlay:before', 
 				'condition' => [
                     '_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
                 ],
@@ -521,7 +521,7 @@ class OoohBoi_Overlay_Underlay {
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -561,7 +561,7 @@ class OoohBoi_Overlay_Underlay {
 					'url' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-image: url("{{URL}}"); mask-image: url("{{URL}}"); -webkit-mask-mode: alpha; mask-mode: alpha;',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-image: url("{{URL}}"); mask-image: url("{{URL}}"); -webkit-mask-mode: alpha; mask-mode: alpha;',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -590,7 +590,7 @@ class OoohBoi_Overlay_Underlay {
 					'bottom right' => __( 'Bottom Right', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-position: {{VALUE}}; mask-position: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-position: {{VALUE}}; mask-position: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_mask_img[url]!' => '',
@@ -615,7 +615,7 @@ class OoohBoi_Overlay_Underlay {
 					'initial' => __( 'Custom', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-size: {{VALUE}}; mask-size: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-size: {{VALUE}}; mask-size: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_mask_img[url]!' => '',
@@ -647,7 +647,7 @@ class OoohBoi_Overlay_Underlay {
 					'unit' => '%',
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_mask_size' => [ 'initial' ],
@@ -659,7 +659,7 @@ class OoohBoi_Overlay_Underlay {
 				'device_args' => [
 					Breakpoints_Manager::BREAKPOINT_KEY_TABLET => [
 						'selectors' => [
-							'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+							'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 						],
 						'condition' => [
 							'_ob_steroids_overlay_mask_size' => [ 'initial' ], 
@@ -669,7 +669,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 					Breakpoints_Manager::BREAKPOINT_KEY_MOBILE => [
 						'selectors' => [
-							'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+							'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 						],
 						'condition' => [
 							'_ob_steroids_overlay_mask_size' => [ 'initial' ], 
@@ -694,7 +694,7 @@ class OoohBoi_Overlay_Underlay {
 					'repeat-y' => __( 'Repeat-y', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '-webkit-mask-repeat: {{VALUE}}; mask-repeat: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => '-webkit-mask-repeat: {{VALUE}}; mask-repeat: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_mask_img[url]!' => '',
@@ -721,7 +721,7 @@ class OoohBoi_Overlay_Underlay {
 				'type' => Controls_Manager::TEXTAREA, 
 				'rows' => 3, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => '{{VALUE}}',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => '{{VALUE}}',
 				],
 				'condition' => [
 					'_ob_steroids_overlay_background_background' => [ 'classic', 'gradient' ], 
@@ -739,7 +739,7 @@ class OoohBoi_Overlay_Underlay {
 				'min' => -9999,
 				'default' => -1, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:before' => 'z-index: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:before' => 'z-index: {{VALUE}};',
 				],
 				'label_block' => false, 
 				'condition' => [
@@ -765,7 +765,7 @@ class OoohBoi_Overlay_Underlay {
             Group_Control_Background::get_type(),
             [
 				'name' => '_ob_steroids_underlay_background', 
-                'selector' => '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after', 
+                'selector' => '{{WRAPPER}}.ob-has-background-overlay:after', 
 				'condition' => [
 					'_ob_poopart_use' => 'yes', 
                 ],
@@ -787,7 +787,7 @@ class OoohBoi_Overlay_Underlay {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'opacity: {{SIZE}};',
+                    '{{WRAPPER}}.ob-has-background-overlay:after' => 'opacity: {{SIZE}};',
 				],
 				'condition' => [
                     '_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
@@ -800,7 +800,7 @@ class OoohBoi_Overlay_Underlay {
             Group_Control_Css_Filter::get_type(),
             [
                 'name' => '_ob_steroids_underlay_bg_filters',
-				'selector' => '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after', 
+				'selector' => '{{WRAPPER}}.ob-has-background-overlay:after', 
 				'condition' => [
                     '_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
 					'_ob_poopart_use' => 'yes', 
@@ -826,7 +826,7 @@ class OoohBoi_Overlay_Underlay {
                     'luminosity' => 'Luminosity',
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'mix-blend-mode: {{VALUE}}',
+                    '{{WRAPPER}}.ob-has-background-overlay:after' => 'mix-blend-mode: {{VALUE}}',
 				], 
 				'condition' => [
                     '_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
@@ -885,7 +885,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'width: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_steroids_underlay_w_alt' => '', 
@@ -902,7 +902,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 100% - 50px or 100% + 2em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'width: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'width: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_popover_whyxrot' => 'yes', 
@@ -944,7 +944,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_steroids_underlay_h_alt' => '', 
@@ -961,7 +961,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 45% + 85px or 100% - 3em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'height: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'height: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_popover_whyxrot' => 'yes', 
@@ -1003,7 +1003,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'top: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_steroids_underlay_y_alt' => '', 
@@ -1020,7 +1020,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 100% - 50px or 100% + 2em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'top: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'top: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_popover_whyxrot' => 'yes', 
@@ -1062,7 +1062,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'left: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_steroids_underlay_x_alt' => '', 
@@ -1079,7 +1079,7 @@ class OoohBoi_Overlay_Underlay {
 				'description' => __( 'Enter CSS calc value only! Like: 100% - 50px or 100% + 2em', 'ooohboi-steroids' ),
 				'type' => Controls_Manager::TEXT,
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'left: calc({{VALUE}});',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'left: calc({{VALUE}});',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_popover_whyxrot' => 'yes', 
@@ -1105,7 +1105,7 @@ class OoohBoi_Overlay_Underlay {
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'transform: rotate({{SIZE}}deg);',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'transform: rotate({{SIZE}}deg);',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_popover_whyxrot' => 'yes', 
@@ -1139,7 +1139,7 @@ class OoohBoi_Overlay_Underlay {
 			[
 				'name' => '_ob_steroids_underlay_borders', 
 				'label' => __( 'Border', 'ooohboi-steroids' ), 
-				'selector' => '{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after', 
+				'selector' => '{{WRAPPER}}.ob-has-background-overlay:after', 
 				'condition' => [
                     '_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
 					'_ob_poopart_use' => 'yes', 
@@ -1154,7 +1154,7 @@ class OoohBoi_Overlay_Underlay {
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'custom' ],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
@@ -1193,7 +1193,7 @@ class OoohBoi_Overlay_Underlay {
 					'url' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-image: url("{{URL}}"); mask-image: url("{{URL}}"); -webkit-mask-mode: alpha; mask-mode: alpha;',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-image: url("{{URL}}"); mask-image: url("{{URL}}"); -webkit-mask-mode: alpha; mask-mode: alpha;',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
@@ -1222,7 +1222,7 @@ class OoohBoi_Overlay_Underlay {
 					'bottom right' => __( 'Bottom Right', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-position: {{VALUE}}; mask-position: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-position: {{VALUE}}; mask-position: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_mask_img[url]!' => '',
@@ -1246,7 +1246,7 @@ class OoohBoi_Overlay_Underlay {
 					'initial' => __( 'Custom', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-size: {{VALUE}}; mask-size: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-size: {{VALUE}}; mask-size: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_mask_img[url]!' => '',
@@ -1277,7 +1277,7 @@ class OoohBoi_Overlay_Underlay {
 					'unit' => '%',
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_mask_size' => [ 'initial' ],
@@ -1288,7 +1288,7 @@ class OoohBoi_Overlay_Underlay {
 				'device_args' => [
 					Breakpoints_Manager::BREAKPOINT_KEY_TABLET => [
 						'selectors' => [
-							'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+							'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 						],
 						'condition' => [
 							'_ob_steroids_underlay_mask_size' => [ 'initial' ], 
@@ -1298,7 +1298,7 @@ class OoohBoi_Overlay_Underlay {
 					],
 					Breakpoints_Manager::BREAKPOINT_KEY_MOBILE => [
 						'selectors' => [
-							'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
+							'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-size: {{SIZE}}{{UNIT}} auto; mask-size: {{SIZE}}{{UNIT}} auto;',
 						],
 						'condition' => [
 							'_ob_steroids_underlay_mask_size' => [ 'initial' ], 
@@ -1323,7 +1323,7 @@ class OoohBoi_Overlay_Underlay {
 					'repeat-y' => __( 'Repeat-y', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '-webkit-mask-repeat: {{VALUE}}; mask-repeat: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => '-webkit-mask-repeat: {{VALUE}}; mask-repeat: {{VALUE}};',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_mask_img[url]!' => '', 
@@ -1349,7 +1349,7 @@ class OoohBoi_Overlay_Underlay {
 				'type' => Controls_Manager::TEXTAREA, 
 				'rows' => 3, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => '{{VALUE}}',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => '{{VALUE}}',
 				],
 				'condition' => [
 					'_ob_steroids_underlay_background_background' => [ 'classic', 'gradient' ], 
@@ -1367,7 +1367,7 @@ class OoohBoi_Overlay_Underlay {
 				'min' => -9999,
 				'default' => -1, 
 				'selectors' => [
-					'{{WRAPPER}}.ob-has-background-overlay > .elementor-widget-container:after' => 'z-index: {{VALUE}};',
+					'{{WRAPPER}}.ob-has-background-overlay:after' => 'z-index: {{VALUE}};',
 				],
 				'label_block' => false, 
 				'condition' => [
