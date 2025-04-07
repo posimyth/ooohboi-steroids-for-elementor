@@ -120,7 +120,7 @@ class OoohBoi_Oh_Animator {
                 '_ob_animator_el_is_sibling',
                 [
                     'label' => esc_html__( 'Animate first child?', 'ooohboi-steroids' ), 
-                    'description' => esc_html__( 'By default ".elementor-widget-container" will be animated. You can animate its first child element instead.', 'ooohboi-steroids' ), 
+                    'description' => esc_html__( 'By default will be animated. You can animate its first child element instead.', 'ooohboi-steroids' ), 
                     'type' => Controls_Manager::SWITCHER,
                     'label_on' => esc_html__( 'Yes', 'ooohboi-steroids' ),
                     'label_off' => esc_html__( 'No', 'ooohboi-steroids' ),

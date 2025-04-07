@@ -46,7 +46,7 @@
             
 			getDefaultElements: function() {
 				return {
-					$container: ( 'yes' === this.getElementSettings( '_ob_animator_el_is_sibling' ) ) ? this.$element.find( '.elementor-widget-container > *:first-child' ) : this.$element.find( '.elementor-widget-container' ),
+					$container: ( 'yes' === this.getElementSettings( '_ob_animator_el_is_sibling' ) ) ? this.$element.find( 'div > *:first-child' ) : this.$element.find( 'div' ),
 				};
 			},
 
