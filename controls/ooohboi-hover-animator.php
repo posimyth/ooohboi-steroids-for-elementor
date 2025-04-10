@@ -240,7 +240,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'opacity: {{SIZE}};',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'opacity: {{SIZE}};',
                 ],
                 'condition' => [
 					'_ob_allow_hoveranimator' => 'yes', 
@@ -289,7 +289,7 @@ class OoohBoi_Hover_Animator {
 					],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ], 
@@ -318,7 +318,7 @@ class OoohBoi_Hover_Animator {
 					],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms;, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ], 
@@ -344,7 +344,7 @@ class OoohBoi_Hover_Animator {
                     'ease-in-out' => __( 'Ease-in-out', 'ooohboi-steroids' ), 
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ], 
@@ -396,7 +396,7 @@ class OoohBoi_Hover_Animator {
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-is-hoveranimal > div' => 'top: {{SIZE}}{{UNIT}};', 
+					'{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'top: {{SIZE}}{{UNIT}};', 
 				],
 				'condition' => [
                     '_ob_hoveranimator_y_alt' => '', 
@@ -415,7 +415,7 @@ class OoohBoi_Hover_Animator {
                 'frontend_available' => true, 
                 'default' => '', 
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'top: calc({{VALUE}});',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'top: calc({{VALUE}});',
                 ],
                 'condition' => [
                     '_ob_allow_hoveranimator' => 'yes', 
@@ -486,7 +486,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -515,7 +515,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -541,7 +541,7 @@ class OoohBoi_Hover_Animator {
                     'ease-in-out' => __( 'Ease-in-out', 'ooohboi-steroids' ), 
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}ms, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -593,7 +593,7 @@ class OoohBoi_Hover_Animator {
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-is-hoveranimal > div' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'left: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
                     '_ob_hoveranimator_x_alt' => '', 
@@ -612,7 +612,7 @@ class OoohBoi_Hover_Animator {
                 'frontend_available' => true, 
                 'default' => '', 
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'left: calc({{VALUE}});',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'left: calc({{VALUE}});',
                 ],
                 'condition' => [
                     '_ob_allow_hoveranimator' => 'yes', 
@@ -683,7 +683,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -712,7 +712,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -738,7 +738,7 @@ class OoohBoi_Hover_Animator {
                     'ease-in-out' => __( 'Ease-in-out', 'ooohboi-steroids' ), 
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -784,7 +784,7 @@ class OoohBoi_Hover_Animator {
                     'size' => 1,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transform: scaleX({{SIZE}}) scaleY({{_ob_hoveranimator_scaley.SIZE}}) rotate({{_ob_hoveranimator_rot.SIZE}}deg);',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transform: scaleX({{SIZE}}) scaleY({{_ob_hoveranimator_scaley.SIZE}}) rotate({{_ob_hoveranimator_rot.SIZE}}deg);',
                 ],
                 'condition' => [
                     '_ob_allow_hoveranimator' => 'yes', 
@@ -833,7 +833,7 @@ class OoohBoi_Hover_Animator {
                     'size' => 1,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transform: scaleX({{_ob_hoveranimator_scalex.SIZE}}) scaleY({{SIZE}}) rotate({{_ob_hoveranimator_rot.SIZE}}deg);',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transform: scaleX({{_ob_hoveranimator_scalex.SIZE}}) scaleY({{SIZE}}) rotate({{_ob_hoveranimator_rot.SIZE}}deg);',
                 ],
                 'condition' => [
                     '_ob_allow_hoveranimator' => 'yes', 
@@ -882,7 +882,7 @@ class OoohBoi_Hover_Animator {
                     'size' => 0,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transform: scaleX({{_ob_hoveranimator_scalex.SIZE}}) scaleY({{_ob_hoveranimator_scaley.SIZE}}) rotate({{SIZE}}deg);',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transform: scaleX({{_ob_hoveranimator_scalex.SIZE}}) scaleY({{_ob_hoveranimator_scaley.SIZE}}) rotate({{SIZE}}deg);',
                 ],
                 'condition' => [
                     '_ob_allow_hoveranimator' => 'yes', 
@@ -933,7 +933,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -962,7 +962,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -988,7 +988,7 @@ class OoohBoi_Hover_Animator {
                     'ease-in-out' => __( 'Ease-in-out', 'ooohboi-steroids' ), 
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -1042,7 +1042,7 @@ class OoohBoi_Hover_Animator {
                     'size' => 0,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'filter: blur({{SIZE}}{{UNIT}});',
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'filter: blur({{SIZE}}{{UNIT}});',
                 ],
                 'condition' => [
                     '_ob_allow_hoveranimator' => 'yes', 
@@ -1099,7 +1099,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
@@ -1128,7 +1128,7 @@ class OoohBoi_Hover_Animator {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{_ob_hoveranimator_blur_easing.VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{SIZE}}ms;', 
                 ],
@@ -1154,7 +1154,7 @@ class OoohBoi_Hover_Animator {
                     'ease-in-out' => __( 'Ease-in-out', 'ooohboi-steroids' ), 
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}.ob-is-hoveranimal > div' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
+                    '{{WRAPPER}}.ob-is-hoveranimal > div, {{WRAPPER}}.ob-is-hoveranimal > h1, {{WRAPPER}}.ob-is-hoveranimal > h2,{{WRAPPER}}.ob-is-hoveranimal > h3,{{WRAPPER}}.ob-is-hoveranimal > h4,{{WRAPPER}}.ob-is-hoveranimal > h5,{{WRAPPER}}.ob-is-hoveranimal > h6,{{WRAPPER}}.ob-is-hoveranimal > p,{{WRAPPER}}.ob-is-hoveranimal > span' => 'transition-duration: {{_ob_hoveranimator_opacity_duration.SIZE}}ms, {{_ob_hoveranimator_y_duration.SIZE}}ms, {{_ob_hoveranimator_x_duration.SIZE}}ms, {{_ob_hoveranimator_transform_duration.SIZE}}ms, {{_ob_hoveranimator_blur_duration.SIZE}}ms; 
                     transition-timing-function: {{_ob_hoveranimator_opacity_easing.VALUE}}, {{_ob_hoveranimator_y_easing.VALUE}}, {{_ob_hoveranimator_x_easing.VALUE}}, {{_ob_hoveranimator_transform_easing.VALUE}}, {{VALUE}}; 
                     transition-delay: {{_ob_hoveranimator_opacity_delay.SIZE}}ms, {{_ob_hoveranimator_y_delay.SIZE}}ms, {{_ob_hoveranimator_x_delay.SIZE}}ms, {{_ob_hoveranimator_transform_delay.SIZE}}ms, {{_ob_hoveranimator_blur_delay.SIZE}}ms;', 
                 ],
