@@ -79,7 +79,9 @@
 
 			runHoverAnimator: function() {
 
-                var myself = this.$element.children('div').first();
+                // var myself = this.$element.children('div').first();
+                var myself = this.$element.children('h1, h2, h3, h4, h5, h6, p, div, span').first();
+
 
                 var parent_column = myself.parent().closest( '.ob-is-hoveranimator' );
                 if( parent_column.length ) {
