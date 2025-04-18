@@ -114,10 +114,6 @@
 	right: calc(100% - 6px);
 	left: unset;
 }
-.ob-is-breaking-bad.elementor-top-section > .elementor-container > .elementor-row, 
-.ob-is-breaking-bad.elementor-inner-section > .elementor-container > .elementor-row {
-	flex-wrap: wrap;
-}
 
 /* NEW mrk */
 sup.ob-new-feature {
