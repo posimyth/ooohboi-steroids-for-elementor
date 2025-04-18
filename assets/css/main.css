@@ -162,7 +162,6 @@ div[class*='ob-teleporter-'] {
 	transform: scale(1);
 }
 .ob-chrome-resize, 
-.ob-chrome-resize .elementor-column-wrap, 
 .ob-chrome-resize.ob-is-e3 .elementor-widget-wrap { 
 	height: unset !important;
 	overflow: visible !important;

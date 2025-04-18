@@ -510,7 +510,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/O
 				'return_value' => 'scroll',
 				'default' => 'visible',
 				'selectors' => [
-					'{{WRAPPER}}.elementor-column > .elementor-column-wrap, {{WRAPPER}}.elementor-column > .elementor-widget-wrap' => 'overflow-y: {{VALUE}};', 
+					'{{WRAPPER}}.elementor-column > .elementor-widget-wrap' => 'overflow-y: {{VALUE}};', 
                 ],
 				'condition' => [
 					'_ob_bbad_column_height!' => '',

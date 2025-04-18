@@ -35,7 +35,7 @@ class OoohBoi_Overlaiz {
 	public static function ooohboi_overlaiz_get_controls( $element, $args ) {
 
 		// selector based on the current element
-		$selector = '{{WRAPPER}} > .elementor-column-wrap > .elementor-background-overlay, {{WRAPPER}} > .elementor-widget-wrap > .elementor-background-overlay';
+		$selector = '{{WRAPPER}} > .elementor-widget-wrap > .elementor-background-overlay';
 		if( 'section' == $element->get_name() ) $selector = '{{WRAPPER}} > .elementor-background-overlay'; 
 		elseif( 'container' == $element->get_name() ) $selector = '{{WRAPPER}}.e-con::before'; 
 
