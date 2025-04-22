@@ -113,8 +113,8 @@ class OoohBoi_Breaking_Bad {
 					'space-evenly' => __( 'Space Evenly', 'ooohboi-steroids' ),
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-is-breaking-bad > .elementor-container > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad > .elementor-container' => 'justify-content: {{VALUE}} !important;', 
-					'{{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container' => 'justify-content: {{VALUE}} !important;', 
+					'{{WRAPPER}}.ob-is-breaking-bad > .elementor-container' => 'justify-content: {{VALUE}} !important;', 
+					'{{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container' => 'justify-content: {{VALUE}} !important;', 
 				],
 				'condition' => [
 					'_ob_bbad_use_it' => 'yes',
@@ -133,10 +133,10 @@ class OoohBoi_Breaking_Bad {
 					'column' => __( 'Column', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-is-breaking-bad > .elementor-container > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad > .elementor-container' => 'flex-direction: {{VALUE}};', 
-					'{{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container' => 'flex-direction: {{VALUE}};', 
-					'{{WRAPPER}}.ob-is-breaking-bad.ob-is-glider > .elementor-container.swiper-vertical > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad.ob-is-glider > .elementor-container.swiper-vertical' => 'flex-direction: column;', 
-					'{{WRAPPER}}.ob-is-breaking-bad.ob-is-glider.ob-bb-inner > .elementor-container.swiper-vertical > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad.ob-is-glider.ob-bb-inner > .elementor-container.swiper-vertical' => 'flex-direction: column;', 
+					'{{WRAPPER}}.ob-is-breaking-bad > .elementor-container' => 'flex-direction: {{VALUE}};', 
+					'{{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container' => 'flex-direction: {{VALUE}};', 
+					'{{WRAPPER}}.ob-is-breaking-bad.ob-is-glider > .elementor-container.swiper-vertical' => 'flex-direction: column;', 
+					'{{WRAPPER}}.ob-is-breaking-bad.ob-is-glider.ob-bb-inner > .elementor-container.swiper-vertical' => 'flex-direction: column;', 
 				],
 				'condition' => [
 					'_ob_bbad_use_it' => 'yes',
@@ -156,8 +156,8 @@ class OoohBoi_Breaking_Bad {
 					'flex-end' => __( 'End', 'ooohboi-steroids' ), 
 				],
 				'selectors' => [
-					'{{WRAPPER}}.ob-is-breaking-bad > .elementor-container > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad > .elementor-container' => 'align-items: {{VALUE}};', 
-					'{{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container > .elementor-row, {{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container' => 'align-items: {{VALUE}};', 
+					'{{WRAPPER}}.ob-is-breaking-bad > .elementor-container' => 'align-items: {{VALUE}};', 
+					'{{WRAPPER}}.ob-is-breaking-bad.ob-bb-inner > .elementor-container' => 'align-items: {{VALUE}};', 
 				],
 				'condition' => [
 					'_ob_bbad_use_it' => 'yes', 
@@ -510,7 +510,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/O
 				'return_value' => 'scroll',
 				'default' => 'visible',
 				'selectors' => [
-					'{{WRAPPER}}.elementor-column > .elementor-column-wrap, {{WRAPPER}}.elementor-column > .elementor-widget-wrap' => 'overflow-y: {{VALUE}};', 
+					'{{WRAPPER}}.elementor-column > .elementor-widget-wrap' => 'overflow-y: {{VALUE}};', 
                 ],
 				'condition' => [
 					'_ob_bbad_column_height!' => '',

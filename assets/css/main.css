@@ -24,8 +24,6 @@
 }
 
 /* flex section */
-.ob-is-breaking-bad.elementor-top-section > .elementor-container > .elementor-row, 
-.ob-is-breaking-bad.elementor-inner-section > .elementor-container > .elementor-row, 
 .ob-is-breaking-bad.elementor-top-section > .elementor-container, 
 .ob-is-breaking-bad.elementor-inner-section > .elementor-container {
 	flex-wrap: wrap;
@@ -44,15 +42,12 @@
 .ob-is-glider .ob-swiper-bundle {
 	width: 100%;
 }
-.ob-is-glider .elementor-container > .elementor-row.swiper-wrapper, 
 .ob-is-glider .elementor-container > .swiper-wrapper {
 	flex-wrap: nowrap !important;
 }
-.ob-is-glider .elementor-container > .elementor-row.swiper-wrapper > .elementor-element.elementor-column, 
 .ob-is-glider .elementor-container > .swiper-wrapper > .elementor-element.elementor-column {
 	width: 100%;
 }
-.ob-is-glider .elementor-container.swiper-vertical > .elementor-row.swiper-wrapper > .swiper-slide, 
 .ob-is-glider .elementor-container.swiper-vertical > .swiper-wrapper > .swiper-slide {
 	width: 100% !important;
 }
@@ -167,7 +162,6 @@ div[class*='ob-teleporter-'] {
 	transform: scale(1);
 }
 .ob-chrome-resize, 
-.ob-chrome-resize .elementor-column-wrap, 
 .ob-chrome-resize.ob-is-e3 .elementor-widget-wrap { 
 	height: unset !important;
 	overflow: visible !important;

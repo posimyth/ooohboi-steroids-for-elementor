@@ -265,9 +265,6 @@
             generateSwiperOld: function() {
 
                 var wrapr = this.$element.children( '.elementor-container' ).first();
-                var wrapr_has_row = $( wrapr ).children( '.elementor-row' ).first(); // chck for elementor-row
-
-                if( wrapr_has_row.length ) wrapr = wrapr_has_row;
 
                 wrapr.children( '[data-element_type="column"]' ).addClass( 'swiper-slide' ).wrapAll( '<div class="swiper-wrapper"></div>' );
 

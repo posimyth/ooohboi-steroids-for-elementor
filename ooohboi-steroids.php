@@ -180,7 +180,12 @@ final class OoohBoi_Steroids {
 
 		// load common stuff functions
 		require plugin_dir_path( __FILE__ ) . 'inc/exopite-simple-options/exopite-simple-options-framework-class.php';
-		require plugin_dir_path( __FILE__ ) . 'inc/common-functions.php';
+		
+		add_action( 'init', 'my_plugin_init_fields' );
+		function my_plugin_init_fields() {
+			require plugin_dir_path( __FILE__ ) . 'inc/common-functions.php';
+		}
+		// require plugin_dir_path( __FILE__ ) . 'inc/common-functions.php';
 
 		// init EXOPIT ---------------------------------------------------------->
 		$ob_settings_options = get_exopite_sof_option( 'steroids_for_elementor' );
