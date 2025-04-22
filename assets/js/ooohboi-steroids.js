@@ -72,7 +72,7 @@
 
                 elementorModules.frontend.handlers.Base.prototype.onInit.apply( this, arguments );
                 // is E3.0 column?
-                if( ! this.$element.find( '.elementor-column-wrap' ).first().length ) this.$element.addClass( 'ob-is-e3' );
+
                 // Teleporter issue with Chrome
                 var ua = navigator.userAgent.toLowerCase();
                 if( ua.indexOf( 'chrome' ) > -1 ) this.teleporterChromeResize();
@@ -91,7 +91,7 @@
                     clearTimeout( myID );   
                     myID = setTimeout( function() { 
                         var column_height = parseInt( dis.$element.closest( '.ob-is-teleporter' ).css( 'height' ) );
-                        var col_wrap = dis.$element.find( '.elementor-column-wrap' ).first();
+                        var col_wrap = "";
                         if( col_wrap.length ) col_wrap.css( { 'height': column_height } );
                         else {
                             dis.$element.find( '.elementor-widget-wrap' ).first().css( { 'height': column_height } );

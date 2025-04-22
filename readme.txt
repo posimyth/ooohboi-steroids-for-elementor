@@ -3,8 +3,8 @@ Contributors: OoohBoi, elementoraddon
 Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost elements, overlapping columns
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 2.1.20
+Tested up to: 6.8
+Stable tag: 2.1.21
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -49,6 +49,10 @@ Rest assured, you won't miss them because there will always be an eye-catching i
 No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 
 == Changelog == 
+
+= 2.1.21 =
+- Fix : Compatibility with WordPress 6.8.0
+- Fix : Minor Bug Fixes & Performance Improvements
 
 = 2.1.20 =
 - Fix : Minor Bug Fixes & Performance Improvements

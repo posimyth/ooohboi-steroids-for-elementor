@@ -6,15 +6,13 @@
                 <p>
                     <strong>What's new to <?php echo OoohBoi_Steroids::VERSION; ?>?</strong>
                 </p>
-                <!-- <h3>Updated</h3>
+                <h3>Compatibility</h3>
                 <ul>
-                    <li>Update : PAGININI Video Explanation Video</li>
-                </ul> -->
+                    <li>Compatibility : Compatibility with WordPress 6.8.0</li>
+                </ul>
 
                 <h3>Fixed</h3>
                 <ul>
-                    <li>Fix : Removes Unused CSS by adding conditions</li>
-                    <li>Fix : Elementor Top Bar is Overlaying</li>
                     <li>Fix : Minor Bug Fixes & Performance Improvements</li>
                 </ul>
 
