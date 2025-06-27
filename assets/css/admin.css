@@ -4,7 +4,8 @@
 .toplevel_page_steroids_for_elementor .notice-errors,
 .toplevel_page_steroids_for_elementor .notice .notice-errors,
 .toplevel_page_steroids_for_elementor .notice-warning,
-.toplevel_page_steroids_for_elementor .is-dismissible {
+.toplevel_page_steroids_for_elementor .is-dismissible,
+.toplevel_page_steroids_for_elementor #ehe-admin-cb {
 	display: none !important;
 }
 
