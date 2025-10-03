@@ -4,7 +4,7 @@ Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost 
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
 Tested up to: 6.8
-Stable tag: 2.1.21
+Stable tag: 2.1.22
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -48,7 +48,16 @@ Rest assured, you won't miss them because there will always be an eye-catching i
 
 No, you don't. It'll work with both free version of Elementor and Elementor PRO.
 
+= How can I report security bugs? =
+
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team helps validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/9e5fbb1f-053a-41dc-a334-bb1fe6ace3a7)
+
+
 == Changelog == 
+
+= 2.1.22 =
+- Fix : Security Patch (Low Security)
+- Fix : Minor Bug Fixes & Performance Improvements
 
 = 2.1.21 =
 - Fix : Compatibility with WordPress 6.8.0
