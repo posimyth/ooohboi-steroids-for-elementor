@@ -135,6 +135,13 @@ if ( ! class_exists( 'Ob_Wdkit_Preview_Popup' ) ) {
 
 			check_ajax_referer( 'Ooohboi_Wdkit_Preview_Popup', 'security' );
 
+			if ( ! current_user_can( 'install_plugins' ) ) {
+				$response = $this->tp_response('Invalid Permission.', 'Something went wrong.', false );
+
+				wp_send_json( $response );
+				wp_die();
+			}
+
 			$installed_plugins = get_plugins();
 
 			include_once ABSPATH . 'wp-admin/includes/file.php';
