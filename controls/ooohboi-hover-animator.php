@@ -44,7 +44,19 @@ class OoohBoi_Hover_Animator {
         add_action( 'elementor/frontend/container/before_render', [ __CLASS__, 'should_script_enqueue' ] );
         add_action( 'elementor/frontend/widget/before_render', [ __CLASS__, 'should_script_enqueue' ] );
         /* add script */
-        add_action( 'elementor/preview/enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
+        // add_action( 'elementor/preview/enqueue_scripts', [ __CLASS__, 'enqueue_scripts' ] );
+
+		add_action( 'elementor/frontend/before_enqueue_scripts', [ __CLASS__, 'ob_enqueue_scripts' ] );
+
+	}
+
+	/**
+	 * Enqueue necessary scripts and styles for the feature.
+	 *
+	 * @since 2.2.0
+	 */
+	public static function ob_enqueue_scripts() {
+		wp_enqueue_script( 'ob-hoveranimator', OoohBoi_URL . 'assets/js/hoveranimator.js', array( 'jquery' ), OoohBoi_VERSION, true );
 
     }
     
