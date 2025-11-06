@@ -4,7 +4,7 @@ Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost 
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
 Tested up to: 6.8
-Stable tag: 2.1.22
+Stable tag: 2.1.23
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -54,6 +54,14 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 
 == Changelog == 
+
+= 2.1.23 =
+- Improvement : GLIDER : Compatibility with Elementor caching
+- Improvement : HOVERANIMATOR : Compatibility with Elementor caching
+- Improvement : PSEUDO : Compatibility with Elementor caching
+- Improvement : SPACERAT : Compatibility with Elementor caching
+- Fix : GLIDER : Glider slider not working with carousel
+- Fix : Minor Bug Fixes & Performance Improvements
 
 = 2.1.22 =
 - Fix : Security Patch (Low Security)
