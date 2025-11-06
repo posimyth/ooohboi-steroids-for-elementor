@@ -19,6 +19,64 @@
 		};
 	}
 
+    // Wait up to ~3s for Elementor's async wrapper; if it never appears, load our own Swiper (global)
+    function obInitSwiper(node, config, done) {
+        if (!node) return;
+        if (node.__obGliderInited && node.__obSwiperInstance) { done && done(node.__obSwiperInstance); return; }
+
+        var tries = 0, maxTries = 30; // 30 * 100ms
+        (function waitWrapper() {
+            tries++;
+            if (window.elementorFrontend && elementorFrontend.utils && elementorFrontend.utils.swiper) {
+                const AsyncSwiper = elementorFrontend.utils.swiper;
+                new AsyncSwiper(node, config).then(function (inst) {
+                    node.__obSwiperInstance = inst;
+                    node.__obGliderInited = true;
+                    done && done(inst);
+                });
+                return;
+            }
+            if (tries < maxTries) return setTimeout(waitWrapper, 100);
+
+            // Wrapper never showed -> fallback to global
+            obEnsureGlobalSwiper(function () {
+                if (window.Swiper) {
+                    var inst = new window.Swiper(node, config);
+                    node.__obSwiperInstance = inst;
+                    node.__obGliderInited = true;
+                    done && done(inst);
+                } else {
+                    console.error('[Glider] Global Swiper still unavailable.');
+                }
+            });
+        })();
+    }
+
+    function obEnsureGlobalSwiper(cb) {
+        if (window.Swiper) return cb && cb();
+
+        var url = (window.ooohboiGlider && window.ooohboiGlider.swiperJsUrl) ? window.ooohboiGlider.swiperJsUrl : null;
+        if (!url) { console.error('[Glider] Missing ooohboiGlider.swiperJsUrl'); return cb && cb(); }
+
+        // avoid double inject
+        if (document.querySelector('script[data-ob="swiper-fallback"]')) {
+            var t = 0, iv = setInterval(function () {
+                if (window.Swiper || t++ > 30) { clearInterval(iv); cb && cb(); }
+            }, 100);
+            return;
+        }
+
+        var s = document.createElement('script');
+        s.src = url;
+        s.async = true;
+        s.defer = true;
+        s.setAttribute('data-ob', 'swiper-fallback');
+        s.onload = function () { cb && cb(); };
+        s.onerror = function () { console.error('[Glider] Failed to load fallback Swiper JS:', url); cb && cb(); };
+        document.head.appendChild(s);
+    }
+
+
     $window.on( 'elementor/frontend/init', function() {
 
         var ModuleHandler = elementorModules.frontend.handlers.Base, 
@@ -50,6 +108,10 @@
 
             isGliderCandidate: function() {
                 return ( 
+                    // //   !this.$element.closest('.swiper').length && // not itself inside some other swiper
+                    // (
+                    //  this.$element.find( '.e-con-inner' ).children( '[data-element_type="container"]' ).length > 1 || this.$element.children( '[data-element_type="container"]' ).length ) );
+
                     ! this.$element.closest( '.swiper' ).length && 
                     ! this.$element.find( '.swiper' ).length && 
                     ( this.$element.find( '.e-con-inner' ).children( '[data-element_type="container"]' ).length > 1 || this.$element.children( '[data-element_type="container"]' ).length ) );
@@ -62,9 +124,10 @@
             onElementChange: function( changedProp ) {
 
                 if( changedProp === '_ob_glider_is_slider' ) { 
+                //     return;
+                // } 
 
-                    console.log( 'Prop changed' );
-                    console.log( 'This is Glider candidate: ' + this.isGliderCandidate() );
+                console.log('[Glider] onElementChange ->', changedProp, 'isCandidate?', this.isGliderCandidate() );
 
                     if( this.isGliderCandidate() ) {
 
@@ -107,6 +170,7 @@
                 wrapr.children( '[data-element_type="container"]' ).addClass( 'swiper-slide' ).wrapAll( '<div class="swiper-wrapper"></div>' );
 
                 // grab the settings...
+                // controls
                 var settingz = {};
 
                 settingz.icon_obj = this.getElementSettings( '_ob_glider_nav_icon' );
@@ -119,6 +183,11 @@
                 .append( default_next )
                 .append( deafult_prev )
                 .append( default_pagi );
+
+                // SCOPED DOM nodes (must exist before config)
+                var nextEl = wrapr.find('.swiper-button-next')[0];
+                var prevEl = wrapr.find('.swiper-button-prev')[0];
+                var pagEl = wrapr.find('.swiper-pagination')[0];
 
                 if( ! $.isEmptyObject( settingz.icon_obj ) ) {
 
@@ -140,6 +209,7 @@
 
                 }
 
+                // settings (unchanged)
                 settingz.pagination_type = this.getElementSettings( '_ob_glider_pagination_type' ) || 'bullets';
                 settingz.allowTouchMove = this.getElementSettings( '_ob_glider_allow_touch_move' );
                 settingz.autoheight = this.getElementSettings( '_ob_glider_auto_h' ) || 'no';
@@ -195,6 +265,7 @@
                 settingz.slides_centered_bounds = this.getElementSettings( '_ob_glider_centered_bounds_slides' ); 
                 settingz.slides_round_lenghts = this.getElementSettings( '_ob_glider_roundlengths_slides' ); 
 
+                // ✅ Build config AFTER nodes exist, include nav/pagination inside
                 // create swiper ----------------------------------------------------------------------------------
                 var swiper_config = {
                     allowTouchMove: ( 'yes' === settingz.allowTouchMove ? true : false ), 
@@ -230,31 +301,19 @@
                     },
                 };
                 // improved asset loading
-                if ( 'undefined' === typeof Swiper ) { // swiper not loaded
-                    var tmp_this = this;
-                    let chck_if_elementor_utils_loaded = setInterval( function() {
 
-                        if( elementorFrontend.utils ) {
-                            clearInterval( chck_if_elementor_utils_loaded ); 
-                            const asyncSwiper = elementorFrontend.utils.swiper;
-                            new asyncSwiper( wrapr, swiper_config ).then( ( newSwiperInstance ) => {
-                                tmp_this.me_the_swiper = newSwiperInstance; 
-                                tmp_this.runSyncStuff( tmp_this.me_the_swiper );
-                            } );
-                        }
+                var node = wrapr[0], self = this;
+                obInitSwiper(node, swiper_config, function (inst) {
+                    self.me_the_swiper = inst;
+                    self.runSyncStuff(inst);
+                    requestAnimationFrame(function () { inst.update(); });
+                });
 
-                    }, 500 ); // wait for Elementor utils to load entirely
-
-                } else { // otherwise swiper exists
-                    this.me_the_swiper = new Swiper( wrapr, swiper_config );
-                    this.runSyncStuff( this.me_the_swiper );
-                }
-                
                 if( this.isEdit ) {
                     var TMP_this = this;
                     // the DOM hack to prevent all kinds of shit ... 
                     elementor.channels.editor.on( 'change:container', function( el ) {
-                        if( el._parent.model.id === TMP_this.getID() ) {
+                        if( el._parent && el._parent.model && el._parent.model.id === TMP_this.getID() ) {
                             w.dispatchEvent( new Event( 'resize' ) ); // trigger only if dealing with the Glider
                         }
                     } );
@@ -265,6 +324,8 @@
             generateSwiperOld: function() {
 
                 var wrapr = this.$element.children( '.elementor-container' ).first();
+
+                wrapr.addClass('ob-swiper-bundle swiper');
 
                 wrapr.children( '[data-element_type="column"]' ).addClass( 'swiper-slide' ).wrapAll( '<div class="swiper-wrapper"></div>' );
 
@@ -282,6 +343,11 @@
                 .append( deafult_prev )
                 .append( default_pagi );
 
+                // Nodes first
+                var nextEl = wrapr.find('.swiper-button-next')[0];
+                var prevEl = wrapr.find('.swiper-button-prev')[0];
+                var pagEl = wrapr.find('.swiper-pagination')[0];
+
                 if( ! $.isEmptyObject( settingz.icon_obj ) ) {
 
                     if( 'string' === typeof settingz.icon_obj.value ) {
@@ -302,6 +368,7 @@
 
                 }
                 
+                // settings (same as container path)
                 settingz.pagination_type = this.getElementSettings( '_ob_glider_pagination_type' ) || 'bullets';
                 settingz.allowTouchMove = this.getElementSettings( '_ob_glider_allow_touch_move' );
                 settingz.autoheight = this.getElementSettings( '_ob_glider_auto_h' ) || 'no';
@@ -357,6 +424,7 @@
                 settingz.slides_centered_bounds = this.getElementSettings( '_ob_glider_centered_bounds_slides' ); 
                 settingz.slides_round_lenghts = this.getElementSettings( '_ob_glider_roundlengths_slides' ); 
 
+                // ✅ Build config here (includes nav/pagination)
                 // create swiper ----------------------------------------------------------------------------------
                 var swiper_config = {
                     allowTouchMove: ( 'yes' === settingz.allowTouchMove ? true : false ), 
@@ -392,31 +460,19 @@
                     },
                 };
                 // improved asset loading
-                if ( 'undefined' === typeof Swiper ) { // swiper not loaded
-                    var tmp_this = this;
-                    let chck_if_elementor_utils_loaded = setInterval( function() {
 
-                        if( elementorFrontend.utils ) {
-                            clearInterval( chck_if_elementor_utils_loaded ); 
-                            const asyncSwiper = elementorFrontend.utils.swiper;
-                            new asyncSwiper( wrapr, swiper_config ).then( ( newSwiperInstance ) => {
-                                tmp_this.me_the_swiper = newSwiperInstance; 
-                                tmp_this.runSyncStuff( tmp_this.me_the_swiper );
-                            } );
-                        }
-
-                    }, 500 ); // wait for Elementor utils to load entirely
-
-                } else { // otherwise swiper exists
-                    this.me_the_swiper = new Swiper( wrapr, swiper_config );
-                    this.runSyncStuff( this.me_the_swiper );
-                }
+                var node = wrapr[0], self = this;
+                obInitSwiper(node, swiper_config, function (inst) {
+                    self.me_the_swiper = inst;
+                    self.runSyncStuff(inst);
+                    requestAnimationFrame(function () { inst.update(); });
+                });
 
                 if( this.isEdit ) {
                     var TMP_this = this;
                     // the DOM hack to prevent all kinds of shit ... 
                     elementor.channels.editor.on( 'change:section', function( el ) {
-                        if( el._parent.model.id === TMP_this.getID() ) {
+                        if( el._parent && el._parent.model && el._parent.model.id === TMP_this.getID() ) {
                             w.dispatchEvent( new Event( 'resize' ) ); // trigger only if dealing with the Glider
                         }
                     } );
@@ -427,6 +483,7 @@
             runSyncStuff: function( swiper_ob ) {
 
                 // external control via the CSS class
+                // : .glider-<id>-gotoslide-<num>
                 this.glider_external_controls = $( 'body' ).find( '[class*="glider-' + this.$element[ 0 ].dataset[ 'id' ] + '-gotoslide-"]' ) || [];
 
                 if( this.glider_external_controls.length ) {
@@ -436,8 +493,9 @@
                     } );
 
                     this.glider_external_controls.on( 'click', function( e ) {
+                        var m = $(this).attr('class').match(/-gotoslide-(\d+)/);
 
-                        var slide_num = parseInt( $( this ).attr( 'class' ).match(/-gotoslide-(\d+)/)[ 1 ] );
+                        var slide_num = m ? parseInt(m[1], 10) : -1;
                         if( slide_num >= 0 ) this.target_swiper.slideTo( slide_num );
 
                         e.preventDefault(); // bail
@@ -446,7 +504,7 @@
                 }
 
             }, 
-            
+
         } );
 
         var handlersList = {
