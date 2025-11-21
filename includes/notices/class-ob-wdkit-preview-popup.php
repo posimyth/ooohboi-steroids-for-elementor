@@ -256,15 +256,19 @@ if ( ! class_exists( 'Ob_Wdkit_Preview_Popup' ) ) {
 						<a class="ob-not-show-again" href="#"><?php echo esc_html__( 'Don’t Show Again', 'ooohboi-steroids' ); ?></a>
 					</div>
 					<div class="ob-close-btn">
-						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976312 12.6834 -0.0976312 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976312 0.683417 -0.0976312 0.292893 0.292893C-0.0976312 0.683417 -0.0976312 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z" fill="white" fill-opacity="0.8" /></svg>
+						<i class="eps-icon eicon-close" aria-hidden="true"></i>
 					</div>
 				</div>
 				<div class="ob-middel-sections">
 					<div class="ob-text-top">
-						<?php echo esc_html__( 'Get 1000+ Predesigned Elementor Templates & Sections', 'ooohboi-steroids' ); ?>
+						<?php echo esc_html__( 'Get 1000+ Predesigned ', 'ooohboi-steroids' ); ?>
+						<br>
+						<?php echo esc_html__( 'Elementor Templates & Sections', 'ooohboi-steroids' ); ?>
 					</div>
 					<div class="ob-text-bottom">
-						<?php echo esc_html__( 'Uniquely designed Elementor Templates for every website type made with Elementor & The Plus Addons for Elementor Widgets.', 'ooohboi-steroids' ); ?>
+						<?php echo esc_html__( 'Uniquely designed Elementor Templates for every website type made ', 'ooohboi-steroids' ); ?>
+						<br>
+						<?php echo esc_html__( 'with Elementor & The Plus Addons for Elementor Widgets.', 'ooohboi-steroids' ); ?>
 					</div>
 					<div class="ob-learn-more-about">
 						<?php if ( false === $plugin_status['installed'] ) { ?>
@@ -277,7 +281,7 @@ if ( ! class_exists( 'Ob_Wdkit_Preview_Popup' ) ) {
 						<?php } else { ?>
 							<a class="ob-wdesign-install" href="#"><span class="ob-visit-plugin"><?php echo esc_html__( 'Visit Plugin', 'ooohboi-steroids' ); ?></span></a>
 						<?php } ?>
-							<a class="ob-wdesign-about" href="https://wdesignkit.com/browse/template?plugin=%5B1003%5D&temp_type=pagetemplate"><?php echo esc_html__( 'Learn More', 'ooohboi-steroids' ); ?></a>
+							<a class="ob-wdesign-about" target="_blank" href="https://wdesignkit.com/templates?temp_type_req=pagetemplate&builder_req=1001"><?php echo esc_html__( 'Learn More', 'ooohboi-steroids' ); ?></a>
 					</div>
 				</div>
 				<div class="ob-image-sections"></div>
