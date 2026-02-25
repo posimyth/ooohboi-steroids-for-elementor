@@ -112,6 +112,21 @@
             },
             initColumnExtends: function() {
                 /* breaking bad */
+
+                function getSafeUrl(url) {
+                    try {
+                        var parsed = new URL(url, window.location.origin);
+                        var allowedProtocols = ['http:', 'https:', 'mailto:', 'tel:'];
+
+                        if (!allowedProtocols.includes(parsed.protocol)) {
+                            return false;
+                        }
+
+                        return parsed.href;
+                    } catch (e) {
+                        return false;
+                    }
+                }
                 if( ! this.isEdit ) {
                     var bb_settings = {};
                     try {
@@ -123,19 +138,30 @@
                     if( undefined !== bb_settings._ob_bbad_link ) { 
 
                         var bb_link = bb_settings._ob_bbad_link;
-                        if( '' === bb_link.url ) { 
+
+                        if( ! bb_link.url || bb_link.url === '' ) { 
                             this.$element.removeClass( 'bb-column-link' );
                             return;
-                        } else {
-                            this.$element.addClass( 'bb-column-link' );
                         }
 
-                        this.$element.off( 'click.bb' );
-                        this.$element.on( 'click.bb', function() {
-                            if( bb_link.is_external ) window.open( bb_link.url ); 
-                            else location.href = bb_link.url;
-                        } );
+                        // Validate URL before using
+                        var safeUrl = getSafeUrl( bb_link.url );
 
+                        if ( ! safeUrl ) {
+                            this.$element.removeClass( 'bb-column-link' );
+                            return;
+                        }
+
+                        this.$element.addClass( 'bb-column-link' );
+                        this.$element.off( 'click.bb' );
+
+                        this.$element.on( 'click.bb', function() {
+                            if( bb_link.is_external ) {
+                                window.open( safeUrl, '_blank', 'noopener,noreferrer' );
+                            } else {
+                                window.location.href = safeUrl;
+                            }
+                        } );
                     }
                 }
                 /* Teleporter */
@@ -289,17 +315,42 @@
                 if( 'no-mobile' === teleporter_settings._ob_teleporter_no_pass_mobile ) 
                     this.$element.addClass( 'ob-tele-no-mobile' ); 
 
+                function getSafeUrl(url) {
+                    try {
+                        var parsed = new URL(url, window.location.origin);
+                        var allowedProtocols = ['http:', 'https:', 'mailto:', 'tel:'];
+
+                        if (!allowedProtocols.includes(parsed.protocol)) {
+                            return false;
+                        }
+
+                        return parsed.href;
+                    } catch (e) {
+                        return false;
+                    }
+                }
                 // handle links
                 if( undefined !== teleporter_settings._ob_teleporter_link ) { 
 
                     var tele_link = teleporter_settings._ob_teleporter_link;
-                    if( '' === tele_link.url ) return;
+                    if( ! tele_link.url || tele_link.url === '' ) {
+                        return;
+                    }
+
+                    var safeUrl = getSafeUrl( tele_link.url );
+
+                    if ( ! safeUrl ) {
+                        return;
+                    }
 
                     this.$element.off( 'click.obTeleporter' );
                     this.$element.on( 'click.obTeleporter', function() {
-                        if( tele_link.is_external ) window.open( tele_link.url ); 
-                        else location.href = tele_link.url;
-                    } );
+                        if( tele_link.is_external ) {
+                            window.open( safeUrl, '_blank', 'noopener,noreferrer' );
+                        } else {
+                            window.location.href = safeUrl;
+                        }
+                    });
 
                 }
 
