@@ -47,10 +47,33 @@
                         var spacerat_link = spacerat_settings._ob_spacerat_link;
                         if( '' === spacerat_link.url ) return;
 
+                        function getSafeUrl(url) {
+                            try {
+                                const parsed = new URL(url, window.location.origin);
+                                const allowed = ['http:', 'https:', 'mailto:', 'tel:'];
+
+                                if (!allowed.includes(parsed.protocol)) {
+                                    return false;
+                                }
+
+                                return parsed.href;
+                            } catch (e) {
+                                return false;
+                            }
+                        }
+
                         this.$element.off( 'click.obSpacerat' );
                         this.$element.on( 'click.obSpacerat', function() {
-                            if( spacerat_link.is_external ) window.open( spacerat_link.url ); 
-                            else location.href = spacerat_link.url;
+
+                            const safeUrl = getSafeUrl(spacerat_link.url);
+
+                            if (!safeUrl) return;
+
+                            if (spacerat_link.is_external) {
+                                window.open(safeUrl, '_blank', 'noopener,noreferrer');
+                            } else {
+                                window.location.href = safeUrl;
+                            }
                         } );
 
                     }
