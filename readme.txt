@@ -3,8 +3,8 @@ Contributors: OoohBoi, elementoraddon
 Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost elements, overlapping columns
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
-Tested up to: 6.8
-Stable tag: 2.1.24
+Tested up to: 6.9
+Stable tag: 2.1.25
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -54,6 +54,12 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 
 == Changelog == 
+
+= 2.1.25 =
+- Security : Fixed vulnerability in Spacerat link controls.
+- Security : Fixed vulnerability in Breaking Bad link controls.
+- Security : Fixed vulnerability in Teleporter link controls.
+- Fix : Minor Bug Fixes & Performance Improvements
 
 = 2.1.24 =
 - Fix : Minor Bug Fixes & Performance Improvements
