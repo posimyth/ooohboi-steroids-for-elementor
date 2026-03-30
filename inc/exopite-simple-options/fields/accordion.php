@@ -14,7 +14,7 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_accordion' ) ) {
 			parent::__construct( $field, $value, $unique, $config, $multilang );
 
 			$this->defaults = array(
-				'section_title'  	=> esc_attr( 'Section Title', 'exopite-sof' ),
+				'section_title'  	=> esc_attr__( 'Section Title', 'exopite-sof' ),
 				'closed'       		=> true,
 				'allow_all_open'	=> true,
 			);
