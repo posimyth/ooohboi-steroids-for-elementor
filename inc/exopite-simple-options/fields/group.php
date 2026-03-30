@@ -33,14 +33,14 @@ if ( ! class_exists( 'Exopite_Simple_Options_Framework_Field_group' ) ) {
 			parent::__construct( $field, $value, $unique, $config );
 
 			$defaults = array(
-				'group_title'  	=> esc_attr( 'Group Title', 'exopite-sof' ),
+				'group_title'  	=> esc_attr__( 'Group Title', 'exopite-sof' ),
 				'repeater'     	=> false,
 				'cloneable'    	=> true,
 				'sortable'   	=> true,
 				'accordion'    	=> true,
 				'closed'       	=> true,
 				'limit'        	=> 0,
-				'button_title' 	=> esc_attr( 'Add new', 'exopite-sof' ),
+				'button_title' 	=> esc_attr__( 'Add new', 'exopite-sof' ),
 			);
 
 			$options = ( ! empty( $this->field['options'] ) ) ? $this->field['options'] : array();
