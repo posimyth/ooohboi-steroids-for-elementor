@@ -606,19 +606,19 @@ final class OoohBoi_Steroids {
 		}
 		// gsap
 		if( 1 === self::$sfe_lib_gsap ) {
-			wp_register_script( 'gsap-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js', [], self::VERSION, true );
 		}
 		// scroll trigger
 		if( 1 === self::$sfe_lib_scroll_trigger ) {
-			wp_register_script( 'scroll-trigger-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'scroll-trigger-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js', [], self::VERSION, true );
 		}
 		// scroll to
 		if( 1 === self::$sfe_lib_scroll_to ) {
-			wp_register_script( 'scroll-to-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js', [], self::VERSION, true );
+			wp_register_script( 'scroll-to-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js', [], self::VERSION, true );
 		}
 		// scroll motion path
 		if( 1 === self::$sfe_lib_motion_path ) {
-			wp_register_script( 'motion-path-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'motion-path-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/MotionPathPlugin.min.js', [], self::VERSION, true );
 		}
 		// barba
 		if( 1 === self::$sfe_lib_barba && ! $ele_is_preview ) {
@@ -630,7 +630,7 @@ final class OoohBoi_Steroids {
 		}
 		// three
 		if( 1 === self::$sfe_lib_three && ! $ele_is_preview ) {
-			wp_register_script( 'three-js', '//cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'three-js', 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r170/three.min.js', [], self::VERSION, true );
 		}
 		// -----------------------------
 
