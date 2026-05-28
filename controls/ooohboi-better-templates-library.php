@@ -342,7 +342,7 @@ class OoohBoi_Better_Templates_Library {
 			self::btl_handle_direct_action_error( 'Access Denied' );
 		}
 
-		$action = $_REQUEST[ 'the_action' ];
+		$action = sanitize_key( $_REQUEST[ 'the_action' ] );
 
 		$result = self::$action( $_REQUEST );
 
