@@ -59,7 +59,10 @@ class OoohBoi_Better_Templates_Library {
 		} );
 
 		// admin styles
-		add_action( 'admin_enqueue_scripts', function() {
+		add_action( 'admin_enqueue_scripts', function( $hook ) {
+
+			$screen = get_current_screen();
+			if ( ! $screen || 'elementor_library' !== $screen->post_type ) return;
 
 			wp_enqueue_script(
 				'ele-btl-admin-js',
