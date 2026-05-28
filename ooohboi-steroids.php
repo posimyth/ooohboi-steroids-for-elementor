@@ -8,8 +8,11 @@
  * Text Domain: ooohboi-steroids
  * License:     GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0
- * Elementor tested up to: 3.34
- * Elementor Pro tested up to: 3.34
+ * Requires at least:      6.0
+ * Requires PHP:           7.4
+ * Tested up to:           7.0
+ * Elementor tested up to: 4.1
+ * Elementor Pro tested up to: 4.1
  */
 
 use Elementor\Core\Settings\Manager as SettingsManager;
