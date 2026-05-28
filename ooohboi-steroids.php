@@ -434,7 +434,7 @@ final class OoohBoi_Steroids {
 		self::ooohboi_take_steroids();
 
 		// is container experiment active?
-		$container_active = \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' );
+		$container_active = ! \Elementor\Plugin::$instance || ! \Elementor\Plugin::$instance->experiments || \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' );
 
 		$extensions_array = [ 
 			'OoohBoi_Harakiri' => 'ob_use_harakiri', 
@@ -653,7 +653,7 @@ final class OoohBoi_Steroids {
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-paginini.php'; // OoohBoi Paginini
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-glider.php'; // OoohBoi Glider Slider
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-overlaiz.php'; // OoohBoi Overlaiz
-		if( ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+		if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-breaking-bad.php'; // OoohBoi Breaking Bad
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-photogiraffe.php'; // OoohBoi PhotoGiraffe
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-teleporter.php'; // OoohBoi Teleporter

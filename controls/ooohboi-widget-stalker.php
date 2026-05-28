@@ -27,7 +27,7 @@ class OoohBoi_Widget_Stalker {
 	 */
 	public static function init() {
 
-        if( ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
 		    add_action( 'elementor/element/common/_section_background/after_section_end',  [ __CLASS__, 'ooohboi_widget_stalker_controls' ] );
         } else {
             add_action( 'elementor/element/common/_section_style/before_section_end',  [ __CLASS__, 'ooohboi_widget_stalker_controls' ] );
@@ -83,7 +83,7 @@ class OoohBoi_Widget_Stalker {
 
 	public static function ooohboi_widget_stalker_controls( Element_Base $element ) {
 
-        if( ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
             $element->start_controls_section(
                 '_ob_widget_stalker',
                 [
@@ -119,7 +119,7 @@ class OoohBoi_Widget_Stalker {
 			]
         );
 
-        if( ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
 
             // ------------------------------------------------------------------------- CONTROL: Size Method
             $element->add_responsive_control(
@@ -249,7 +249,7 @@ class OoohBoi_Widget_Stalker {
 				],
 			]
 		);
-        if( ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
 
             // ------------------------------------------------------------------------- CONTROL: align self
             $element->add_responsive_control(
@@ -297,7 +297,7 @@ class OoohBoi_Widget_Stalker {
 
         }
 
-        if( ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) $element->end_controls_section(); // END SECTION / PANEL
+        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) $element->end_controls_section(); // END SECTION / PANEL
 
     }
 
