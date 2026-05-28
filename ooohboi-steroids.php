@@ -590,7 +590,7 @@ final class OoohBoi_Steroids {
 	* @since 1.0.0
 	*/
 	public function ooohboi_check_file_avail( $the_file ) {
-		return (bool)@fopen( $the_file, 'r' );
+		return file_exists( $the_file ) && is_readable( $the_file );
 	}
 
 	public function ooohboi_register_scripts_front() {
