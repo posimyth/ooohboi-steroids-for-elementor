@@ -2,21 +2,25 @@
 /**
  * Plugin Name: OoohBoi Steroids for Elementor
  * Description: An awesome set of tools/options/settings that extend Elementor default/existing widgets and elements. It keeps the editor tidy, saves valuable resources and improves the workflow.
- * Version:     2.1.25
+ * Version:     2.1.26
  * Author:      OoohBoi
  * Author URI:  https://www.youtube.com/c/OoohBoi
+ * Plugin URI:  https://wordpress.org/plugins/ooohboi-steroids-for-elementor/
  * Text Domain: ooohboi-steroids
  * License:     GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0
- * Elementor tested up to: 3.34
- * Elementor Pro tested up to: 3.34
+ * Requires at least:      6.0
+ * Requires PHP:           7.4
+ * Tested up to:           7.0
+ * Elementor tested up to: 4.1
+ * Elementor Pro tested up to: 4.1
  */
 
 use Elementor\Core\Settings\Manager as SettingsManager;
 
 defined( 'ABSPATH' ) || die(); // Exit if accessed directly.
 
-define( 'OoohBoi_VERSION', '2.1.25' );
+define( 'OoohBoi_VERSION', '2.1.26' );
 define( 'OoohBoi_FILE', __FILE__ );
 define( 'OoohBoi_URL', plugins_url( '/', __FILE__ ) );
 define( 'OoohBoi_PATH', plugin_dir_path( __FILE__ ) );
@@ -430,7 +434,7 @@ final class OoohBoi_Steroids {
 		self::ooohboi_take_steroids();
 
 		// is container experiment active?
-		$container_active = ( 'active' === get_option( 'elementor_experiment-container' ) ) ? true : false;
+		$container_active = ! \Elementor\Plugin::$instance || ! \Elementor\Plugin::$instance->experiments || \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' );
 
 		$extensions_array = [ 
 			'OoohBoi_Harakiri' => 'ob_use_harakiri', 
@@ -590,7 +594,7 @@ final class OoohBoi_Steroids {
 	* @since 1.0.0
 	*/
 	public function ooohboi_check_file_avail( $the_file ) {
-		return (bool)@fopen( $the_file, 'r' );
+		return file_exists( $the_file ) && is_readable( $the_file );
 	}
 
 	public function ooohboi_register_scripts_front() {
@@ -606,19 +610,19 @@ final class OoohBoi_Steroids {
 		}
 		// gsap
 		if( 1 === self::$sfe_lib_gsap ) {
-			wp_register_script( 'gsap-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js', [], self::VERSION, true );
 		}
 		// scroll trigger
 		if( 1 === self::$sfe_lib_scroll_trigger ) {
-			wp_register_script( 'scroll-trigger-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'scroll-trigger-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js', [], self::VERSION, true );
 		}
 		// scroll to
 		if( 1 === self::$sfe_lib_scroll_to ) {
-			wp_register_script( 'scroll-to-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js', [], self::VERSION, true );
+			wp_register_script( 'scroll-to-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js', [], self::VERSION, true );
 		}
 		// scroll motion path
 		if( 1 === self::$sfe_lib_motion_path ) {
-			wp_register_script( 'motion-path-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'motion-path-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/MotionPathPlugin.min.js', [], self::VERSION, true );
 		}
 		// barba
 		if( 1 === self::$sfe_lib_barba && ! $ele_is_preview ) {
@@ -630,7 +634,7 @@ final class OoohBoi_Steroids {
 		}
 		// three
 		if( 1 === self::$sfe_lib_three && ! $ele_is_preview ) {
-			wp_register_script( 'three-js', '//cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', [], self::VERSION, true ); 
+			wp_register_script( 'three-js', 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r170/three.min.js', [], self::VERSION, true );
 		}
 		// -----------------------------
 
@@ -649,7 +653,7 @@ final class OoohBoi_Steroids {
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-paginini.php'; // OoohBoi Paginini
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-glider.php'; // OoohBoi Glider Slider
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-overlaiz.php'; // OoohBoi Overlaiz
-		if( 'active' !== get_option( 'elementor_experiment-container' ) ) {
+		if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-breaking-bad.php'; // OoohBoi Breaking Bad
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-photogiraffe.php'; // OoohBoi PhotoGiraffe
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-teleporter.php'; // OoohBoi Teleporter

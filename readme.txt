@@ -3,8 +3,8 @@ Contributors: OoohBoi, elementoraddon
 Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost elements, overlapping columns
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
-Tested up to: 6.9
-Stable tag: 2.1.25
+Tested up to: 7.0
+Stable tag: 2.1.26
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
