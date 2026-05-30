@@ -27,11 +27,11 @@ class OoohBoi_Widget_Stalker {
 	 */
 	public static function init() {
 
-        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
-		    add_action( 'elementor/element/common/_section_background/after_section_end',  [ __CLASS__, 'ooohboi_widget_stalker_controls' ] );
-        } else {
-            add_action( 'elementor/element/common/_section_style/before_section_end',  [ __CLASS__, 'ooohboi_widget_stalker_controls' ] );
-        }
+        // NOTE: Register on the 'common' hooks only. For optimized widgets (Widget_Common_Optimized),
+        // Elementor manually re-fires the 'common' hook via its backward-compat mechanism, so registering
+        // on 'common-optimized' too would run the callback twice and redeclare controls.
+        add_action( 'elementor/element/common/_section_background/after_section_end', [ __CLASS__, 'ooohboi_widget_stalker_controls' ] );
+        add_action( 'elementor/element/common/_section_style/before_section_end',  [ __CLASS__, 'ooohboi_widget_stalker_controls' ] );
         add_action( 'elementor/element/after_add_attributes',  [ __CLASS__, 'ob_widget_stalker_add_attributes' ] ); 
 
         /* should enqueue? */
@@ -83,12 +83,20 @@ class OoohBoi_Widget_Stalker {
 
 	public static function ooohboi_widget_stalker_controls( Element_Base $element ) {
 
-        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        $experiments     = \Elementor\Plugin::$instance ? \Elementor\Plugin::$instance->experiments : null;
+        $container_active = $experiments ? (bool) $experiments->is_feature_active( 'container' ) : false;
+        $is_after_end    = false !== strpos( current_filter(), 'after_section_end' );
+
+        // Skip if the hook context doesn't match the container state
+        if ( $is_after_end && $container_active ) return;
+        if ( ! $is_after_end && ! $container_active ) return;
+
+        if( ! $container_active ) {
             $element->start_controls_section(
                 '_ob_widget_stalker',
                 [
-                    'label' => 'W I D G E T - S T A L K E R', 
-                    'tab' => Controls_Manager::TAB_ADVANCED,  
+                    'label' => 'W I D G E T - S T A L K E R',
+                    'tab' => Controls_Manager::TAB_ADVANCED,
                 ]
             );
         } else {
@@ -96,9 +104,9 @@ class OoohBoi_Widget_Stalker {
             $element->add_control(
                 '_ob_perspektive',
                 [
-                    'label' => 'W I D G E T - S T A L K E R', 
+                    'label' => 'W I D G E T - S T A L K E R',
                     'type' => Controls_Manager::HEADING,
-                    'separator' => 'before', 
+                    'separator' => 'before',
                 ]
             );
         }
@@ -119,7 +127,7 @@ class OoohBoi_Widget_Stalker {
 			]
         );
 
-        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        if( ! $container_active ) {
 
             // ------------------------------------------------------------------------- CONTROL: Size Method
             $element->add_responsive_control(
@@ -249,7 +257,7 @@ class OoohBoi_Widget_Stalker {
 				],
 			]
 		);
-        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+        if( ! $container_active ) {
 
             // ------------------------------------------------------------------------- CONTROL: align self
             $element->add_responsive_control(
@@ -297,7 +305,7 @@ class OoohBoi_Widget_Stalker {
 
         }
 
-        if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) $element->end_controls_section(); // END SECTION / PANEL
+        if( ! $container_active ) $element->end_controls_section(); // END SECTION / PANEL
 
     }
 
