@@ -424,6 +424,28 @@ final class OoohBoi_Steroids {
 	}
 
 	/**
+	 * Determine whether Elementor's "container" experiment is explicitly active.
+	 *
+	 * Deterministic by design: it reads only the stored experiment option, so it
+	 * returns the same value no matter when (or from which hook) it is called.
+	 *
+	 * We intentionally do NOT use \Elementor\Plugin::$instance->experiments->is_feature_active()
+	 * here. That object is not populated during 'plugins_loaded' on Elementor 4.x
+	 * (it is created later, on the 'init' hook), and depending on it made the result
+	 * timing-dependent — the root cause of the 2.1.26/2.1.27 regressions where the
+	 * legacy Section/Column modules (Breaking Bad, PhotoGiraffe, Teleporter,
+	 * Perspektive) were wrongly excluded.
+	 *
+	 * This mirrors the proven, deterministic check used through 2.1.25: only an
+	 * explicit 'active' state excludes the legacy modules.
+	 *
+	 * @return bool
+	 */
+	public static function ooohboi_is_container_active() {
+		return 'active' === get_option( 'elementor_experiment-container' );
+	}
+
+	/**
 	* Init Extensions
 	*
 	* @since 1.4.8
@@ -434,7 +456,7 @@ final class OoohBoi_Steroids {
 		self::ooohboi_take_steroids();
 
 		// is container experiment active?
-		$container_active = ! \Elementor\Plugin::$instance || ! \Elementor\Plugin::$instance->experiments || \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' );
+		$container_active = self::ooohboi_is_container_active();
 
 		$extensions_array = [ 
 			'OoohBoi_Harakiri' => 'ob_use_harakiri', 
@@ -471,7 +493,7 @@ final class OoohBoi_Steroids {
 
 		/* since 1.9.1 & Elementor 3.6+ */
 		$exclude_with_containers = [];
-		if( $container_active ) $exclude_with_containers = [ 'OoohBoi_Breaking_Bad', 'OoohBoi_PhotoGiraffe', 'OoohBoi_Teleporter', 'OoohBoi_Perspektive' ]; 
+		if( $container_active ) $exclude_with_containers = [ 'OoohBoi_Breaking_Bad', 'OoohBoi_PhotoGiraffe', 'OoohBoi_Teleporter', 'OoohBoi_Perspektive' ];
 
 		/* since 2.1.3 */
 		$disabled_by_default = [ 'OoohBoi_Better_Templates_Library' ];
@@ -653,11 +675,11 @@ final class OoohBoi_Steroids {
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-paginini.php'; // OoohBoi Paginini
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-glider.php'; // OoohBoi Glider Slider
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-overlaiz.php'; // OoohBoi Overlaiz
-		if( \Elementor\Plugin::$instance && \Elementor\Plugin::$instance->experiments && ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'container' ) ) {
+		if( ! self::ooohboi_is_container_active() ) {
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-breaking-bad.php'; // OoohBoi Breaking Bad
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-photogiraffe.php'; // OoohBoi PhotoGiraffe
 			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-teleporter.php'; // OoohBoi Teleporter
-			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-perspektive.php'; // OoohBoi Perspektive 
+			include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-perspektive.php'; // OoohBoi Perspektive
 		}
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-searchcop.php'; // OoohBoi Search Cop
 		include_once plugin_dir_path( __FILE__ ) . 'controls/ooohboi-videomasq.php'; // OoohBoi Video Masq
