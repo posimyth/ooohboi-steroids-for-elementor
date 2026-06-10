@@ -4,7 +4,7 @@ Tags: page-builder, elementor, add-on, background-overlay, vertical text, ghost 
 Donate link: https://www.paypal.me/ooohboi
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 2.1.27
+Stable tag: 2.1.28
 Requires PHP: 7.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
@@ -54,6 +54,10 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 
 == Changelog == 
+
+= 2.1.28 =
+- Fix : Restored Breaking Bad, PhotoGiraffe, Teleporter and Perspektive modules that were missing in the editor on classic Section/Column sites under Elementor 4.x.
+- Fix : Container experiment is now detected reliably during plugin load, so modules are no longer wrongly excluded.
 
 = 2.1.27 =
 - Fix : Widget Stalker : Resolved fatal "You can't start a section before the end of the previous section '_section_style'" error causing a white screen on Elementor 4.x.
