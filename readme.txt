@@ -56,8 +56,8 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 == Changelog == 
 
 = 2.1.28 =
-- Fix : Restored Breaking Bad, PhotoGiraffe, Teleporter and Perspektive modules that were missing in the editor on classic Section/Column sites under Elementor 4.x.
-- Fix : Container experiment is now detected reliably during plugin load, so modules are no longer wrongly excluded.
+- Fix : Restored Breaking Bad modules that were missing in the editor on classic Section/Column sites under Elementor 4.x.
+- Fix : Minor Bug Fixes & Performance Improvements
 
 = 2.1.27 =
 - Fix : Widget Stalker : Resolved fatal "You can't start a section before the end of the previous section '_section_style'" error causing a white screen on Elementor 4.x.
